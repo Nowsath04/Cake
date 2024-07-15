@@ -1,0 +1,16 @@
+.casino_maindiv {
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+.casino_div {
+    margin: 40px;
+}
+
+
+.casino_heading {
+    font-size: var(--mainHeading-font-size);
+    color: var(--mainHeading-color);
+    font-weight: var(--mainHeading-font-weight);
+}

@@ -4,7 +4,6 @@
   --mainHeading-font-size: 36px;
   --mainHeading-color: #F5F5F5;
   --mainHeading-font-weight: 700;
-  --mainHeading-line-height: 36px;
 
   /* sub Heading  ( 24px ) */
   --subHeading-font-size: 24px;
@@ -24,10 +23,19 @@
   --normal-font-weight: 500;
   --normal-font-height: 14px;
 
+
+  /*   small  ( 12px ) */
+  --small-font-size: 12px;
+
+
   /*   Border-color  ( 14px ) */
 
   --border-color: #293C53;
 
+
+  /*   button-color  ( 14px ) */
+
+  --button-color: #00A0FF;
 
 }
 
@@ -40,10 +48,9 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  background-color:#04141e ;
+  background-color: #04141e;
   font-size: 14px;
   color: white;
   height: 100vh;
   width: 100vw;
 }
-
