@@ -1,4 +1,37 @@
-*{
+:root {
+
+  /* Main Heading ( 36px ) */
+  --mainHeading-font-size: 36px;
+  --mainHeading-color: #F5F5F5;
+  --mainHeading-font-weight: 700;
+  --mainHeading-line-height: 36px;
+
+  /* sub Heading  ( 24px ) */
+  --subHeading-font-size: 24px;
+  --subHeading-color: #F5F5F5;
+  --subHeading-font-weight: 700;
+  --subHeading-line-height: 24px;
+
+  /*   Heading  ( 16px ) */
+  --category-font-size: 16px;
+  --category-color: #F5F5F5;
+  --category-font-weight: 500;
+  --category-line-height: 16px;
+
+  /*   Normal  ( 14px ) */
+  --normal-font-size: 14px;
+  --normal-font-color: #8CA3B8;
+  --normal-font-weight: 500;
+  --normal-font-height: 14px;
+
+  /*   Border-color  ( 14px ) */
+
+  --border-color: #293C53;
+
+
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
