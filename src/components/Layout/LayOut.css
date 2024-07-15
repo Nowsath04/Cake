@@ -1,0 +1,10 @@
+.layer_1 {
+  width: 100%;
+}
+.layer_2 {
+  width: 100%;
+  display: flex;
+}
+.content{
+    flex: 1;
+}
