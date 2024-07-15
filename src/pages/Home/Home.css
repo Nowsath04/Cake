@@ -1,4 +1,10 @@
-.home{
-    overflow: scroll;
-    scrollbar-width: none
+
+
+.home_container{
+    background-color: rgb(113, 144, 144);
+    height: 100%;
 }
+.slider-container {
+    width: 100%;
+    color: white;
+  }
