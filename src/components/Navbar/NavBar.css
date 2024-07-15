@@ -1,0 +1,10 @@
+.navbar {
+  width: 100vw;
+}
+.nav_container{
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,5 @@
+.chat{
+    height: calc(100vh - 70px);
+    width: 364px;
+    background-color: aqua;
+}

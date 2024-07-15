@@ -1,11 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import "./NavBar.css";
 const NavBar = () => {
   return (
-    <div>
-      NavBar
-    </div>
-  )
-}
+    <header className="navbar">
+      <nav className="nav_container">nav</nav>
+    </header>
+  );
+};
 
-export default NavBar
+export default NavBar;
