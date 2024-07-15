@@ -1,9 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
+import { IoMdArrowDropup } from "react-icons/io";
 const NavBar = () => {
+  const [loged, setLogoed] = useState(false);
   return (
     <header className="navbar">
-      <nav className="nav_container">nav</nav>
+      <nav className="nav_container">
+        <div className="nav_left">
+          <img src="\assets\images\nav\icon\Group 13717.png" alt="" />
+          <a href="#">
+            <img src="\assets\images\nav\Frame 96.svg" alt="icon" />
+          </a>
+        </div>
+        <div className="nav_right">
+          {!loged && (
+            <div className="nav_right_login">
+              <img src="\assets\images\nav\icon\search.png" alt="" />
+              <button className="btn login_btn">LOGIN</button>
+              <button className="btn register_btn">REGISTER</button>
+            </div>
+          )}
+          <div className="nav_right_info">
+            <div className="info_box">
+              {loged && (
+                <div className="nav_info_icon">
+                  <img src="\assets\images\nav\icon\search.png" alt="" />
+                  <img src="\assets\images\nav\icon\user.png" alt="" />
+                  <img src="\assets\images\nav\icon\Frame.png" alt="" />
+                </div>
+              )}
+
+              <div className="info_box_details">
+                <img src="\assets\images\nav\Layer_1.png" alt="" />
+                <div className="details">
+                  <div className="coin_price">
+                    <p>Cake coin</p>
+                    <p>$0.183712</p>
+                  </div>
+                  <div className="coin_increase">
+                    <p>Cake</p>
+                    <p className="prec">
+                      25.35% <IoMdArrowDropup /> 
+                    </p>
+                  </div>
+                </div>
+                <button className="btn">BUY</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
   );
 };
