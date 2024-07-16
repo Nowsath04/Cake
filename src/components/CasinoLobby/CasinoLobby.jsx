@@ -65,42 +65,7 @@ function CasinoLobby() {
         setRecents(true)
     }
     return (
-        <div className='casinolobby_maindiv'>
-            <div className='casinolobby_div'>
-                <div className='casinolobby_category_div'>
-                    <button onClick={handleLobby} style={{ background: lobby ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                        <img src='\assets\images\CasinoLobby\lobby.png' />
-                        <div>Lobby</div>
-                    </button>
-                    <button onClick={handleOriginal} style={{ background: originals ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                        <img src='\assets\images\CasinoLobby\lobby.png' />
-                        <div>Originals</div>
-                    </button>
-                    <button onClick={handleLive} style={{ background: live ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                        <img src='\assets\images\CasinoLobby\lobby.png' />
-                        <div>Live</div>
-                    </button>
-                    <button onClick={handleGameShows} style={{ background: gameShows ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                        <img src='\assets\images\CasinoLobby\lobby.png' />
-                        <div>Game Shows</div>
-                    </button>
-                    <button onClick={handleFavourites} style={{ background: favourites ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                        <img src='\assets\images\CasinoLobby\lobby.png' />
-                        <div>Favourites</div>
-                    </button>
-                    <button onClick={handleRecents} style={{ background: recents ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                        <img src='\assets\images\CasinoLobby\lobby.png' />
-                        <div>Recents</div>
-                    </button>
-                </div>
-                <div className='casinolobby_search_div'>
-                    <div>
-                        <img src="\assets\images\CasinoLobby\search.png" alt='' />
-                    </div>
-                    <input placeholder='Search your game' />
-                </div>
-            </div>
-        </div>
+        <div></div>
     )
 }
 

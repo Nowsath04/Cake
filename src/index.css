@@ -90,3 +90,26 @@ body {
 .btn:hover {
   background-color: var(--btn-hovercolor);
 }
+
+.sub-heading {
+  font-size: var(--subHeading-font-size);
+  color: var(--subHeading-color);
+  font-weight: var(--subHeading-font-weight);
+  display: flex;
+  align-items: center;
+}
+
+.casinolobby_categery_button img {
+  width: 16px;
+  height: 16px;
+  fill: white !important;
+  color: white !important;
+}
+
+.viewall {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00A0FF;
+  margin-left: 12px;
+  cursor: pointer;
+}

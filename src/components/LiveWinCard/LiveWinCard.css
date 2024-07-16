@@ -1,3 +1,18 @@
+.swiper-slide-custom-livewins {
+    width: 84px !important;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 10px !important;
+}
+
+.swiper-slide-custom-livewins:last-child {
+    margin-right: 0 !important;
+    /* Remove margin for the last slide */
+}
+
 .slider-container {
     width: 100% !important;
     padding: 12px;
@@ -7,7 +22,7 @@
     margin: 26px 0 40px 0;
 }
 
-.slick-list {
+.slider-container .slick-list {
     overflow: hidden !important;
     text-align: left;
 }
@@ -16,7 +31,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .LiveWinCard {

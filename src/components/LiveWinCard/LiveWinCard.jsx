@@ -1,10 +1,20 @@
-import React from 'react';
-import Slider from "react-slick";
-import "./LiveWinCards.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-function LiveWinCards() {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import "./LiveWinCard.css"
+
+// import required modules
+import { FreeMode, Navigation, Pagination } from 'swiper/modules';
+
+function LiveWinCard() {
+
+    const [swiper, setSwiper] = useState(null);
+
 
     const cardImages = [
         {
@@ -131,40 +141,42 @@ function LiveWinCards() {
 
     ];
 
-
-    const settings = {
-        className: "center",
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 9,
-        speed: 500,
-        swipeToSlide: true,
-        arrows: false,
-    };
     return (
         <div className="slider-container">
             <div className='LiveWinCards_content'>
                 <img src='/assets/images/LiveWinCards/red_dot.png' alt='red dot' />
                 <div>LIVE WINS</div>
             </div>
-            <Slider {...settings}>
+            <Swiper
+                slidesPerView="auto"
+                spaceBetween={10}
+                freeMode={true}
+                pagination={{ clickable: true }}
+                modules={[FreeMode, Pagination]}
+                className="mySwiper"
+                onSwiper={setSwiper}
+            >
                 {
                     cardImages.map((data, index) => {
                         return (
-                            <div className="LiveWinCard">
-                                <img className='LiveWinCard_img' src={data.mainImage} alt='LiveWinCard' />
-                                <div className='LiveWinCard_level'>
-                                    <img src={data.subImage} alt='level' />
-                                    <div>{data.level}</div>
+                            <SwiperSlide key={index} className="swiper-slide-custom-livewins">
+                                <div className="LiveWinCard">
+                                    <img className='LiveWinCard_img' src={data.mainImage} alt='LiveWinCard' />
+                                    <div className='LiveWinCard_level'>
+                                        <img src={data.subImage} alt='level' />
+                                        <div>{data.level}</div>
+                                    </div>
+                                    <div className='LiveWinCard_price'>{data.price}</div>
                                 </div>
-                                <div className='LiveWinCard_price'>{data.price}</div>
-                            </div>
+                            </SwiperSlide>
+
                         )
                     })
                 }
-            </Slider>
+
+            </Swiper>
         </div>
-    );
+    )
 }
 
-export default LiveWinCards;
+export default LiveWinCard

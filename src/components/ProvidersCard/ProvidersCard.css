@@ -1,0 +1,27 @@
+.swiper-slide-custom-provider {
+    width: 316px !important;
+    height: 100px !important;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 10px !important;
+}
+
+.swiper-slide-custom-provider:last-child {
+    margin-right: 0 !important;
+    /* Remove margin for the last slide */
+}
+
+.provider_card {
+    width: 316px !important;
+    height: 100px !important;
+    background: #072537;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.provider_card_img {}
