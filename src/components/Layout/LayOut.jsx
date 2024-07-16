@@ -8,7 +8,7 @@ const LayOut = ({ children }) => {
     <div className="layer_1">
       <NavBar />
       <div className="layer_2">
-        <SideBar />
+        <SideBar className="sidebar"/>
         <div className="content">{children}</div>
         <Chat />
       </div>

@@ -2,15 +2,18 @@
   width: 220px;
   height: calc(100vh - 70px);
   background-color: #072537;
-  padding: 20px 16px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  border-right: 1px solid var(--border-color);
+  transition: all 0.6s ease-in-out;
 }
 .side_top {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 20px 16px;
 }
 .categart_section {
-
   padding: 6px;
   background-color: var(--secondary-background);
   border-radius: 10px;
@@ -18,14 +21,17 @@
   gap: 10px;
   justify-content: space-between;
 }
-.categart_section > .categort {
-    cursor: pointer;
-  background-color: var(--btn-color);
+.categart_section > .category {
+  cursor: pointer;
+  background-color: #04141e;
   padding: 8px 20px;
   border-radius: 10px;
 }
+.active {
+  background-color: var(--btn-color) !important;
+}
 .bonus {
-    cursor: pointer;
+  cursor: pointer;
   padding: 4px 8px;
   background: linear-gradient(96.18deg, #1e5c96 2.26%, #00a0ff 100%);
   display: flex;
@@ -33,17 +39,160 @@
   align-items: center;
   border-radius: 10px;
 }
-.bonus:nth-child(3){
-    background: linear-gradient(276.03deg, #23D8B7 0%, rgba(0, 222, 115, 0.61) 100%);
+.bonus:nth-child(3) {
+  background: linear-gradient(
+    276.03deg,
+    #23d8b7 0%,
+    rgba(0, 222, 115, 0.61) 100%
+  );
 }
 
-.bonus >.bonus_left{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.bonus > .bonus_left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.bonus>.bonus_right{
-    padding: 4px 8px;
-    background-color: var(--icon-background);
-    border-radius: 4px;
+.bonus > .bonus_right {
+  padding: 4px 8px;
+  background-color: var(--icon-background);
+  border-radius: 4px;
+}
+
+.casino_main {
+  cursor: pointer;
+  padding: 10px 8px;
+  background: var(--active-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.casino_main > .casino_left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.casino_main > img {
+  transition: all 0.3s ease-in-out;
+}
+.casino_subheading {
+  margin: 4px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.casino_sub {
+  cursor: pointer;
+  padding: 10px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.casino_sub:nth-child(1) {
+  border-radius: 10px 10px 0 0;
+}
+
+.casino_sub:hover {
+  background: var(--active-background);
+}
+.casino_sub > .casino_sub_left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.casino_subheadings {
+  border-bottom: 1px solid var(--border-color);
+}
+.casino_section {
+  height: 40px;
+  transition: all 0.8s;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.nav_small {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  gap: 20px;
+}
+
+.nav_small > a:nth-child(1) {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: linear-gradient(96.18deg, #1e5c96 2.26%, #00a0ff 100%);
+  border-radius: 10px;
+}
+
+.nav_small_icon {
+  color: white;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+
+  border-radius: 10px;
+}
+.nav_small_icon:hover {
+  background-color: var(--icon-background);
+}
+.nav_small_icon_active {
+  background-color: var(--icon-background);
+}
+
+.tooltip_live {
+  background-color: transparent;
+  z-index: 2;
+  position: absolute;
+  left: 50px;
+  height: 40px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  visibility: hidden;
+  
+}
+.tooltiptext_live {
+  position: relative;
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--icon-background);
+  padding: 10px 20px;
+
+}
+.tooltiptext_live::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--icon-background);
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+ 
+}
+.second:hover .tooltip_live {
+  visibility: visible;
+}
+
+.first:hover .tooltip_live{
+  visibility: visible;
+}
+.large_tooltip{
+  position: absolute;
+  visibility: hidden;
+  width: 180px;
+  z-index: 2;
+  left: 50px;
+  top: 215px;
+  display: flex;
+  justify-content: end;
+}
+.nav_small_icon_active:hover .large_tooltip{
+  visibility: visible;
 }
