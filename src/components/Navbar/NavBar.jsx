@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { IoMdArrowDropup } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleNav } from "../../sclices/navSlice";
 const NavBar = () => {
   const [loged, setLogoed] = useState(false);
+  const dispatch = useDispatch();
+  const {isNavVisible} = useSelector((state) => state.navReducer);
+
   return (
     <header className="navbar">
       <nav className="nav_container">
         <div className="nav_left">
-          <img src="\assets\images\nav\icon\Group 13717.png" alt="" />
+          <img src="\assets\images\nav\icon\Group 13717.png" alt=""  style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }}onClick={() => dispatch(toggleNav())} />
           <a href="#">
-            <img src="\assets\images\nav\Frame 96.svg" alt="icon" />
+            <img src="\assets\images\nav\Frame 96.svg" alt="icon"  />
           </a>
         </div>
         <div className="nav_right">

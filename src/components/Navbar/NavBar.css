@@ -1,7 +1,10 @@
 .navbar {
+  position: relative;
+  z-index: 1;
   width: 100vw;
   background-color: var(--primary-background);
   border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
 }
 .nav_container {
   height: 70px;

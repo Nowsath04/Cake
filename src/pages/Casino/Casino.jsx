@@ -11,6 +11,7 @@ function Casino() {
         <div className='casino_heading'>CASINO</div>
         <LiveWinCards />
         <CasinoLobby />
+       
       </div>
     </div>
   )
