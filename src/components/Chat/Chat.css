@@ -1,5 +1,99 @@
-.chat{
-    height: calc(100vh - 70px);
-    width: 364px;
-    background-color: aqua;
+.chat {
+  height: calc(100vh - 70px);
+  width: 364px;
+  background-color: var(--secondary-background);
+  border-left: 1px solid var(--border-color);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+.chat_nav {
+  height: 48px;
+  position: fixed;
+  background-color: var(--primary-background);
+  width: 364px;
+  z-index: 2;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+
+}
+.chat_nav > img {
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+.chat_message {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 34px 16px;
+  gap: 12px;
+  overflow-y: scroll;
+  flex: 1;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--primary-background);
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3947;
+  border-radius: 10px;
+}
+.message_input_section {
+  height: 130px;
+  background-color: var(--primary-background);
+}
+
+.message_input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.message_input_section > input {
+  height: 45px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--primary-background);
+  outline: none;
+  border: 1px solid var(--border-color);
+  color: white;
+  scrollbar-width: none;
+}
+.message_send {
+  display: flex;
+}
+.message_send > .detail {
+  display: flex;
+}
+.message_send {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.message_send > .gif_image {
+  display: flex;
+  gap: 10px;
+}
+.gif_image > img {
+  cursor: pointer;
+}
+.message_send >.detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+.message_send >.detail >p >span{
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(8, 178, 8);
+    border-radius: 50%;
 }

@@ -8,8 +8,8 @@ import NavCard from "../navcard/NavCard";
 import { useSelector } from "react-redux";
 import NavToolTip from "../NavToolTip/NavToolTip";
 const SideBar = () => {
-const {isNavVisible} = useSelector((state) => state.navReducer);
- 
+  const { isNavVisible } = useSelector((state) => state.navReducer);
+
   const [casinoActive, setCasinoActive] = useState(false);
   const [sportActive, setSportActive] = useState(false);
   const handelcasino = () => {
@@ -157,33 +157,32 @@ const {isNavVisible} = useSelector((state) => state.navReducer);
         </div>
       ) : (
         <div className="nav_small">
-        <a href="#">
-          <img src="/assets/images/sidebar/images/bonus.png" alt="" />
-        </a>
-        <a href="#">
-          <img src="/assets/images/sidebar/images/spin.png" alt="" />
-        </a>
-        <a href="#" className="nav_small_icon nav_small_icon_active" >
-          <div className="large_tooltip">
-            <NavToolTip data={casinoGameDetails} heading={"Casino"}/>
-          </div>
-          <img src="/assets/images/sidebar/icons/casino.png" alt="" />
-        </a>
-        <a href="#"  className="nav_small_icon first">
-        <div className="tooltip_live" >
-            <span className="tooltiptext_live">Blog</span>
-          </div>
-          <img src="/assets/images/sidebar/icons/blog.png" alt="" />
-        </a>
-        <a href="#" className="nav_small_icon second">
-          <div className="tooltip_live">
-            <span className="tooltiptext_live">Live</span>
-          </div>
-          <img src="/assets/images/sidebar/icons/live-footer.png" alt="" />
-        </a>
-      </div>
+          <a href="#">
+            <img src="/assets/images/sidebar/images/bonus.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="/assets/images/sidebar/images/spin.png" alt="" />
+          </a>
+          <a href="#" className="nav_small_icon nav_small_icon_active">
+            <div className="large_tooltip">
+              <NavToolTip data={casinoGameDetails} heading={"Casino"} />
+            </div>
+            <img src="/assets/images/sidebar/icons/casino.png" alt="" />
+          </a>
+          <a href="#" className="nav_small_icon first">
+            <div className="tooltip_live">
+              <span className="tooltiptext_live">Blog</span>
+            </div>
+            <img src="/assets/images/sidebar/icons/blog.png" alt="" />
+          </a>
+          <a href="#" className="nav_small_icon second">
+            <div className="tooltip_live">
+              <span className="tooltiptext_live">Live</span>
+            </div>
+            <img src="/assets/images/sidebar/icons/live-footer.png" alt="" />
+          </a>
+        </div>
       )}
-     
     </div>
   );
 };
