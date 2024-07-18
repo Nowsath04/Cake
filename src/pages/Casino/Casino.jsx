@@ -7,6 +7,8 @@ import ProvidersCard from '../../components/ProvidersCard/ProvidersCard';
 import LiveCasino from '../../components/LiveCasino/LiveCasino';
 import NewReleaseCard from '../../components/NewReleaseCard/NewReleaseCard';
 import GameShowCard from '../../components/GameShowCard/GameShowCard';
+import BetList from '../../components/BetList/BetList';
+import CakeOriginalCard from '../../components/cake-original-loading-card/CakeOriginalCard';
 
 
 function Casino() {
@@ -128,6 +130,9 @@ function Casino() {
         <NewReleaseCard />
         {/* <Game Shows/> */}
         <GameShowCard />
+        {/* < My Bets /> */}
+        <BetList />
+        <CakeOriginalCard />
       </div>
     </div>
   )

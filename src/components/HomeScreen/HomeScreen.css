@@ -1,0 +1,71 @@
+.homescreen_maindiv {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homescreen_div {
+    width: 100%;
+}
+
+.mainHeading {
+    font-size: 80px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.mainHeading span {
+    font-size: 80px;
+    color: #00A0FF;
+}
+
+.homescreen_btn_div {
+    margin-top: 40px;
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.register_home_btn {
+    width: 100% !important;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+}
+
+.social_icon_maindiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.continueOr {
+    font-size: var(--category-font-size);
+    font-weight: var(--category-font-weight);
+}
+
+.Social_icon_div {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #293C53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Social_icon_div:hover {
+    opacity: 0.7;
+}
+
+.Social_icon_div img {
+    width: 24px !important;
+    height: 24px !important;
+}

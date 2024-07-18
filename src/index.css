@@ -115,3 +115,13 @@ body {
   margin-left: 12px;
   cursor: pointer;
 }
+
+
+
+@media screen and (min-width: 1800px) {
+  .casino_div {
+    width: 1136px !important;
+    margin: 40px auto !important;
+    ;
+  }
+}

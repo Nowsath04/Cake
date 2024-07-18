@@ -1,0 +1,104 @@
+/* casino lobby */
+
+
+.casinolobby_bet_div {
+    width: 353px;
+    height: auto;
+    padding: 6px;
+    background: #072537;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin-top: 40px;
+}
+
+.casinolobby_bet_button div {
+    white-space: nowrap;
+}
+
+.casinolobby_bet_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 8px;
+    border-radius: 10px;
+    font-size: var(--category-font-size);
+    color: var(--category-color);
+    font-weight: var(--category-font-weight);
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bet_table_div {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    height: 48px;
+}
+
+tr {
+    border-radius: 10px;
+}
+
+td {
+    text-align: left;
+    padding: 12px 0 12px 20px;
+    background: #072537;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.game_name_img {
+    display: flex;
+    align-items: center;
+}
+
+.green_color {
+    color: #3AC922;
+}
+
+.bitcoin_img img {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    position: relative;
+    top: 3px;
+}
+
+.blue_color {
+    color: #0099F4;
+    cursor: pointer;
+}
+
+td img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+td:nth-last-child(1) {
+    border-radius: 0 10px 10px 0px;
+}
+
+td:nth-child(1) {
+    border-radius: 10px 0px 0px 10px;
+}
+
+th {
+    text-align: left;
+    padding: 12px 0 12px 20px;
+    height: 48px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #8CA3B8;
+    text-transform: uppercase;
+
+}

@@ -7,23 +7,23 @@ import { toggleNav } from "../../sclices/navSlice";
 const NavBar = () => {
   const [loged, setLogoed] = useState(false);
   const dispatch = useDispatch();
-  const {isNavVisible} = useSelector((state) => state.navReducer);
+  const { isNavVisible } = useSelector((state) => state.navReducer);
 
   return (
     <header className="navbar">
       <nav className="nav_container">
         <div className="nav_left">
-          <img src="\assets\images\nav\icon\Group 13717.png" alt=""  style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }}onClick={() => dispatch(toggleNav())} />
+          <img src="\assets\images\nav\icon\Group 13717.png" alt="" style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }} onClick={() => dispatch(toggleNav())} />
           <a href="#">
-            <img src="\assets\images\nav\Frame 96.svg" alt="icon"  />
+            <img src="\assets\images\nav\Frame 96.svg" alt="icon" />
           </a>
         </div>
         <div className="nav_right">
           {!loged && (
             <div className="nav_right_login">
               <img src="\assets\images\nav\icon\search.png" alt="" />
-              <button className="btn login_btn">LOGIN</button>
-              <button className="btn register_btn">REGISTER</button>
+              <Link to={"/"} className="btn login_btn">LOGIN</Link>
+              <Link to={"/casino"} className="btn register_btn">REGISTER</Link>
             </div>
           )}
           <div className="nav_right_info">
@@ -46,7 +46,7 @@ const NavBar = () => {
                   <div className="coin_increase">
                     <p>Cake</p>
                     <p className="prec">
-                      25.35% <IoMdArrowDropup /> 
+                      25.35% <IoMdArrowDropup />
                     </p>
                   </div>
                 </div>
