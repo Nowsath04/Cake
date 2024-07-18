@@ -1,0 +1,16 @@
+.navcoinselect{
+    width: auto;
+    padding: 5px 12px;
+    background-color: var(--secondary-background);
+    border-radius: 10px;
+}
+.nav_select{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.nav_select_left{
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+}

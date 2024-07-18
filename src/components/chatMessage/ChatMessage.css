@@ -1,0 +1,22 @@
+.ChatMessage{
+    width: 100%;
+    padding: 8px;
+    background-color: var(--primary-background);
+    border-radius: 8px;;
+    gap: 8px;
+display: flex;
+align-items: start;
+justify-content: start;
+}
+.ChatMessage>img{
+    margin-top: 4px;
+}
+.ChatMessage >p{
+    color: var( --primary-font-color);
+    word-wrap: normal;
+    height: fit-content;
+}
+.ChatMessage >p >span{
+    color: white;
+    line-height: 21px
+}

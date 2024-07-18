@@ -55,7 +55,8 @@
   /*   button-color  ( 14px ) */
 
   --button-color: #00A0FF;
-
+/* font color */
+ --primary-font-color:#8CA3B8
 }
 
 * {

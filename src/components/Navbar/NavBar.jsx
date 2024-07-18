@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { IoMdArrowDropup } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleNav } from "../../sclices/navSlice";
+import { showChat } from "../../sclices/chatSlice";
+import NavCoinSelect from "../navCoinSelect/NavCoinSelect";
 const NavBar = () => {
-  const [loged, setLogoed] = useState(false);
+  const [loged, setLogoed] = useState(true);
   const dispatch = useDispatch();
-  const { isNavVisible } = useSelector((state) => state.navReducer);
+  const {isNavVisible} = useSelector((state) => state.navReducer);
+  const {isChatVisible} = useSelector((state) => state.chatReducer);
 
   return (
     <header className="navbar">
@@ -18,24 +21,30 @@ const NavBar = () => {
             <img src="\assets\images\nav\Frame 96.svg" alt="icon" />
           </a>
         </div>
+        <div className="nav_center">
+          <NavCoinSelect/>
+        </div>
         <div className="nav_right">
           {!loged && (
             <div className="nav_right_login">
-              <img src="\assets\images\nav\icon\search.png" alt="" />
-              <Link to={"/"} className="btn login_btn">LOGIN</Link>
-              <Link to={"/casino"} className="btn register_btn">REGISTER</Link>
+             {
+                    isChatVisible?"":  <img src="\assets\images\nav\icon\Frame.png" alt=""  onClick={()=>dispatch(showChat())}/>
+                  }
+              <button className="btn login_btn">LOGIN</button>
+              <button className="btn register_btn">REGISTER</button>
             </div>
           )}
           <div className="nav_right_info">
             <div className="info_box">
               {loged && (
                 <div className="nav_info_icon">
+                  {
+                    isChatVisible?"":  <img src="\assets\images\nav\icon\Frame.png" alt=""  onClick={()=>dispatch(showChat())}/>
+                  }
                   <img src="\assets\images\nav\icon\search.png" alt="" />
                   <img src="\assets\images\nav\icon\user.png" alt="" />
-                  <img src="\assets\images\nav\icon\Frame.png" alt="" />
                 </div>
               )}
-
               <div className="info_box_details">
                 <img src="\assets\images\nav\Layer_1.png" alt="" />
                 <div className="details">
