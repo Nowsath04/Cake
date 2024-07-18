@@ -1,54 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Home.css"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-const Home = () => {
+import HomeScreen from '../../components/HomeScreen/HomeScreen'
+import HomeBanner from '../../components/HomeBanner/HomeBanner'
+import GoToCard from '../../components/GoToCard/GoToCard'
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
+
+function Home() {
+
   return (
-    <div className='home_container'>
-      <div className="slider-container">
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
+    <>
+      <div className='casino_maindiv'>
+        <div className='casino_div'>
+          <HomeScreen />
+          <HomeBanner />
+          <GoToCard />
         </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-        <div>
-          <h3>7</h3>
-        </div>
-        <div>
-          <h3>8</h3>
-        </div>
-        <div>
-          <h3>9</h3>
-        </div>
-      </Slider>
-    </div>
-    </div>
-    
-  );
-
+      </div></>
+  )
 }
 
 export default Home

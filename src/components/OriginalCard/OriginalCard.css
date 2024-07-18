@@ -25,7 +25,7 @@
     object-fit: cover;
 }
 
-.swiper-pagination {
+.orginal_swiperCard_div .swiper-pagination {
     display: none !important;
 }
 
@@ -168,12 +168,28 @@
     z-index: 2;
 }
 
+.textbox_heading {
+    position: relative;
+    top: -50px;
+    left: -50px;
+    font-size: var(--category-font-size);
+    font-weight: var(--category-font-weight);
+}
+
+.textbox_name {
+    position: relative;
+    top: 40px;
+    left: 0px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--normal-font-weight);
+}
+
 .og_card:hover .textBox {
     opacity: 1;
 }
 
 .og_card:hover .img {
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 @keyframes anim {

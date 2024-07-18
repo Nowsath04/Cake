@@ -1,0 +1,16 @@
+.orginal_CakeCard_div {
+    overflow-y: visible !important;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.Loading_div {
+    margin-top: 40px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px !important;
+}

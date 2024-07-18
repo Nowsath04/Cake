@@ -16,9 +16,9 @@ const NavBar = () => {
     <header className="navbar">
       <nav className="nav_container">
         <div className="nav_left">
-          <img src="\assets\images\nav\icon\Group 13717.png" alt=""  style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }}onClick={() => dispatch(toggleNav())} />
+          <img src="\assets\images\nav\icon\Group 13717.png" alt="" style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }} onClick={() => dispatch(toggleNav())} />
           <a href="#">
-            <img src="\assets\images\nav\Frame 96.svg" alt="icon"  />
+            <img src="\assets\images\nav\Frame 96.svg" alt="icon" />
           </a>
         </div>
         <div className="nav_center">
@@ -55,7 +55,7 @@ const NavBar = () => {
                   <div className="coin_increase">
                     <p>Cake</p>
                     <p className="prec">
-                      25.35% <IoMdArrowDropup /> 
+                      25.35% <IoMdArrowDropup />
                     </p>
                   </div>
                 </div>

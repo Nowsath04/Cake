@@ -5,6 +5,7 @@
   background-color: var(--primary-background);
   border-bottom: 1px solid var(--border-color);
 }
+
 .nav_container {
   height: 70px;
   display: flex;
@@ -14,59 +15,73 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .nav_left {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.nav_left >img{
-cursor: pointer;
+
+.nav_left>img {
+  cursor: pointer;
 }
-.nav_left > a {
+
+.nav_left>a {
   display: flex;
   align-items: center;
 }
+
 .nav_right {
   display: flex;
   gap: 16px;
 }
+
 .nav_right_login {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.nav_right_login > img {
+
+.nav_right_login>img {
   cursor: pointer;
 }
-.nav_right_login > .login_btn {
+
+.nav_right_login>.login_btn {
   padding: 10px 32px;
   background-color: transparent;
   font-weight: bolder;
 }
-.nav_right_login > .login_btn:hover {
+
+.nav_right_login>.login_btn:hover {
   background-color: transparent;
 }
-.nav_right_login > .login_btn:focus {
+
+.nav_right_login>.login_btn:focus {
   border: 1px solid var(--btn-color);
 }
-.nav_right_login > .register_btn {
+
+.nav_right_login>.register_btn {
   padding: 10px 32px;
   font-weight: bolder;
   border: 1px solid transparent;
+  text-decoration: none;
 }
 
 .info_box {
   display: flex;
   gap: 16px;
 }
+
 .nav_info_icon {
   display: flex;
   align-items: center;
   gap: 18px;
 }
-.nav_info_icon > img {
+
+.nav_info_icon>img {
   cursor: pointer;
 }
+
 .info_box_details {
   border-left: 1px solid var(--border-color);
   width: 260px;
@@ -75,22 +90,24 @@ cursor: pointer;
   justify-content: end;
   gap: 8px;
 }
-.info_box_details > .details {
+
+.info_box_details>.details {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.info_box_details > .details > .coin_price {
+
+.info_box_details>.details>.coin_price {
   font-size: 16px;
   font-weight: 500;
 }
 
-.info_box_details > .details > .coin_increase {
+.info_box_details>.details>.coin_increase {
   font-size: 16px;
 }
 
 
-.coin_increase >.prec{
+.coin_increase>.prec {
   display: flex;
   color: #49ba36;
 }

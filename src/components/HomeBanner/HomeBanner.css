@@ -1,0 +1,114 @@
+.homebanner_div {
+    margin-top: 40px;
+}
+
+.homebanner_div.swiper {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+}
+
+
+.homebanner_div .swiper-slide {
+    position: relative !important;
+    background-position: center;
+    background-size: cover;
+    background: #072537;
+    border-radius: 10px !important;
+}
+
+.swiper-pagination-bullet {
+    background: #8CA3B8;
+}
+
+.homebanner_div .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px !important;
+
+}
+
+
+.Homebanner_card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-button-prev-banner_div {
+    position: absolute;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.swiper-button-prev-banner {
+    border: none;
+    background: transparent;
+    rotate: 90deg;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+
+}
+
+.swiper-button-next-banner {
+    border: none;
+    background: transparent;
+    rotate: 270deg;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+.Homebanner_card_img_wrapper {
+    position: relative;
+    width: 50% !important;
+    height: 223px !important;
+    overflow: hidden;
+}
+
+.Homebanner_card_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Homebanner_card_img_wrapper::before {
+    background: linear-gradient(270deg, #072537, rgba(7, 37, 55, 0) 80.8%);
+    border-radius: 10px;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: -2%;
+    top: 0;
+    width: 100%;
+}
+
+
+.Homebanner_card_content {
+    width: 50% !important;
+    height: auto;
+}
+
+
+.Homebanner_card_heading {
+    width: 90%;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 8px;
+
+}
+
+.Homebanner_card_url a {
+    color: #00A0FF;
+    cursor: pointer !important;
+    text-decoration: underline;
+}
