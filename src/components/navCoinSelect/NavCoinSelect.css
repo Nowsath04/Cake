@@ -14,3 +14,10 @@
     display: flex;
     gap: 8px;
 }
+.allnav_coin{
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    z-index: 99999999999999999999999;
+    background-color: red;
+}

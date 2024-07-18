@@ -69,13 +69,13 @@
 body {
   font-family: "DM Sans", sans-serif;
   background-color: #04141e;
-  background-color: #04141e;
   font-size: 14px;
   color: white;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   position: relative;
+  z-index: -1;
 }
 
 .btn {
@@ -115,4 +115,11 @@ body {
   color: #00A0FF;
   margin-left: 12px;
   cursor: pointer;
+}
+.swiper {
+  z-index: 0 !important;
+}
+.swiper-wrapper{
+  z-index: 0 !important;
+
 }
