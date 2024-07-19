@@ -7,7 +7,8 @@ import { coinSelect, toggleNav } from "../../sclices/navSlice";
 import { showChat } from "../../sclices/chatSlice";
 import NavCoinSelect from "../navCoinSelect/NavCoinSelect";
 const NavBar = () => {
-  const [loged, setLogoed] = useState(false);
+  const [loged, setLogoed] = useState(true);
+  const [userDropdown, setUserDropdown] = useState(false);
   const dispatch = useDispatch();
   const { isNavVisible, slectedCoin } = useSelector(
     (state) => state.navReducer
@@ -18,6 +19,12 @@ const NavBar = () => {
     price: "00.2",
     icon: "/assets/images/nav/icon/BNB.svg",
   };
+
+  const HandleProfileDropdown = () => {
+    setUserDropdown(!userDropdown);
+  }
+
+
   useEffect(() => {
     dispatch(coinSelect(value));
   }, []);
@@ -31,9 +38,9 @@ const NavBar = () => {
             style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }}
             onClick={() => dispatch(toggleNav())}
           />
-          <a href="#">
+          <Link to="/">
             <img src="\assets\images\nav\Frame 96.svg" alt="icon" />
-          </a>
+          </Link>
         </div>
         <div className="nav_center">
           <NavCoinSelect />
@@ -67,8 +74,31 @@ const NavBar = () => {
                       onClick={() => dispatch(showChat())}
                     />
                   )}
-                  <img src="\assets\images\nav\icon\search.png" alt="" />
-                  <img src="\assets\images\nav\icon\user.png" alt="" />
+                  <div className="user_images_div">
+                    <img src="\assets\images\nav\icon\search.png" alt="" />
+                    <img className="user_image" src="\assets\images\nav\icon\user.png" alt="" onClick={HandleProfileDropdown} />
+                    {
+                      <div className="user_dropdown_maindiv" style={{ height: userDropdown ? "458px" : "0px" }}>
+                        <div className="user_dropdown_top_div">
+                          <div className="user_dropdown_top_name">Nowsath A</div>
+                          <div className="user_dropdown_top_img"><img src="\assets\images\nav\icon\rank_bronze 3.svg" alt="" />Bronze</div>
+                          <div className="user_dropdown_top_progressBar"><span></span></div>
+                        </div>
+                        <div className="user_dropdown_list_div">
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\profile.svg" alt="" /> Profile</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\wallet.svg" alt="" /> Wallet</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\deposit.svg" alt="" /> Deposit</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\withdraw.svg" alt="" /> Withdraw</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\transactions.svg" alt="" /> Transactions</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\affiliate.svg" alt="" /> Affiliate</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\rank.svg" alt="" /> Rank</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\liveSupport.svg" alt="" /> Live Support</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\settings.svg" alt="" /> Settings</button>
+                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\signOut.svg" alt="" /> Sign Out</button>
+                        </div>
+                      </div>
+                    }
+                  </div>
                 </div>
               )}
               <div className="info_box_details">
@@ -91,7 +121,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-    </header>
+    </header >
   );
 };
 
