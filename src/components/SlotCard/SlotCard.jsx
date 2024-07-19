@@ -38,10 +38,10 @@ export default function SlotCard() {
                         Slots <span><a className='viewall'>View all</a></span></div>
                     <div className='og_arrow_div'>
                         <button className="swiper-button-prev2" onClick={() => swiper?.slidePrev()}>
-                            <img src='public/assets/images/CasinoLobby/arrow.png' alt='prev' />
+                            <img src='/assets/images/CasinoLobby/arrow.png' alt='prev' />
                         </button>
                         <button className="swiper-button-next2" onClick={() => swiper?.slideNext()}>
-                            <img src='public/assets/images/CasinoLobby/arrow.png' alt='next' />
+                            <img src='/assets/images/CasinoLobby/arrow.png' alt='next' />
                         </button>
                     </div>
                 </div>

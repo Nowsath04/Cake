@@ -1,6 +1,9 @@
-
-.App{
+.App {
     width: 100%;
     position: relative;
     height: 100%;
+}
+
+.sidebar_active {
+    background: var(--active-background) !important;
 }

@@ -16,7 +16,7 @@ const NavBar = () => {
   const value = {
     name: "BNB",
     price: "00.2",
-    icon: "public/assets/images/nav/icon/BNB.svg",
+    icon: "/assets/images/nav/icon/BNB.svg",
   };
   useEffect(() => {
     dispatch(coinSelect(value));

@@ -54,14 +54,14 @@ export default function NewReleaseCard() {
                             onClick={() => swiper?.slidePrev()}
                             disabled={isBeginning}
                         >
-                            <img src='public/assets/images/CasinoLobby/arrow.png' alt='prev' />
+                            <img src='/assets/images/CasinoLobby/arrow.png' alt='prev' />
                         </button>
                         <button
                             className={`swiper-button-next5 ${isEnd ? 'disabled' : ''}`}
                             onClick={() => swiper?.slideNext()}
                             disabled={isEnd}
                         >
-                            <img src='public/assets/images/CasinoLobby/arrow.png' alt='next' />
+                            <img src='/assets/images/CasinoLobby/arrow.png' alt='next' />
                         </button>
                     </div>
                 </div>

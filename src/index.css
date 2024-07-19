@@ -118,6 +118,13 @@ body {
   cursor: pointer;
 }
 
+.sidebar_link {
+  text-decoration: none;
+  color: #8CA3B8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 
 
 @media screen and (min-width: 1800px) {
@@ -181,9 +188,11 @@ body {
   }
 
 }
+
 .swiper {
   z-index: 0 !important;
 }
-.swiper-wrapper{
+
+.swiper-wrapper {
   z-index: 0 !important;
 }

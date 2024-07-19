@@ -2,12 +2,12 @@ export const Dummy_coin = [
   {
     name: "BNB",
     price: "00.2",
-    icon: "public/assets/images/nav/icon/BNB.svg",
+    icon: "/assets/images/nav/icon/BNB.svg",
   },
   {
     name: "DOGE",
     price: "00.4",
-    icon: "public/assets/images/nav/icon/dogecoin.svg",
+    icon: "/assets/images/nav/icon/dogecoin.svg",
   },
   {
     name: "LTC",
@@ -17,9 +17,9 @@ export const Dummy_coin = [
   {
     name: "ETH",
     price: "00.3",
-    icon: "public/assets/images/nav/icon/ethereum.svg",
+    icon: "/assets/images/nav/icon/ethereum.svg",
   },
-, {
+  , {
     name: "USDC",
     price: "00.9",
     icon: "/assets/images/nav/icon/usdcI.svg",
@@ -27,6 +27,6 @@ export const Dummy_coin = [
   {
     name: "USDT",
     price: "00.12",
-    icon: "public/assets/images/nav/icon/usdtI.svg",
+    icon: "/assets/images/nav/icon/usdtI.svg",
   },
 ];

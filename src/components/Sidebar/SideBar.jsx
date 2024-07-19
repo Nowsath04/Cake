@@ -41,12 +41,14 @@ const SideBar = () => {
             <div
               className={`category ${casino ? "active" : ""}`}
               onClick={handelcasinoActive}
+              style={{ background: casino ? "#0099F4" : "" }}
             >
               Casino
             </div>
             <div
               className={`category ${sport ? "active" : ""}`}
               onClick={handelsportActive}
+              style={{ background: sport ? "#0099F4" : "" }}
             >
               Sports
             </div>

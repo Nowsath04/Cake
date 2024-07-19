@@ -10,12 +10,13 @@ import GameShowCard from '../../components/GameShowCard/GameShowCard';
 import BetList from '../../components/BetList/BetList';
 import CakeOriginalCard from '../../components/cake-original-loading-card/CakeOriginalCard';
 import Footer from '../../components/Footer/Footer';
+import { NavLink, Outlet } from 'react-router-dom';
 
 
 function Casino() {
 
 
-  const [lobby, setLobby] = useState(true)
+  const [lobby, setLobby] = useState(false)
   const [originals, setOriginals] = useState(false)
   const [live, setLive] = useState(false)
   const [gameShows, setGameShows] = useState(false)
@@ -86,54 +87,42 @@ function Casino() {
         <div className='casinolobby_maindiv'>
           <div className='casinolobby_div'>
             <div className='casinolobby_category_div'>
-              <button onClick={handleLobby} style={{ background: lobby ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                <img src='\assets\images\CasinoLobby\lobby16x16.svg' />
+              <NavLink to="/casino/lobby" onClick={handleLobby} style={{ background: lobby ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
+                <img src='/assets/images/CasinoLobby/lobby16x16.svg' />
                 <div>Lobby</div>
-              </button>
-              <button onClick={handleOriginal} style={{ background: originals ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                <img src='\assets\images\CasinoLobby\c16x16.svg' />
+              </NavLink>
+              <NavLink to="/casino/cake-original" onClick={handleOriginal} style={{ background: originals ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
+                <img src='/assets/images/CasinoLobby/c16x16.svg' />
                 <div>CAKE Originals</div>
-              </button>
-              <button onClick={handleLive} style={{ background: live ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                <img src='\assets\images\CasinoLobby\live.svg' />
+              </NavLink>
+              <NavLink to="/casino/live-casino" onClick={handleLive} style={{ background: live ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
+                <img src='/assets/images/CasinoLobby/live.svg' />
                 <div>Live</div>
-              </button>
-              <button onClick={handleGameShows} style={{ background: gameShows ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                <img src='\assets\images\CasinoLobby\tv.svg' />
+              </NavLink>
+              <NavLink to="/casino/game-shows" onClick={handleGameShows} style={{ background: gameShows ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
+                <img src='/assets/images/CasinoLobby/tv.svg' />
                 <div>Game Shows</div>
-              </button>
-              <button onClick={handleFavourites} style={{ background: favourites ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                <img src='\assets\images\CasinoLobby\star.svg' />
+              </NavLink>
+              <NavLink to="/casino/favourite" onClick={handleFavourites} style={{ background: favourites ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
+                <img src='/assets/images/CasinoLobby/star.svg' />
                 <div>Favourites</div>
-              </button>
-              <button onClick={handleRecents} style={{ background: recents ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
-                <img src='\assets\images\CasinoLobby\recent.svg' />
+              </NavLink>
+              <NavLink to="/casino/recents" onClick={handleRecents} style={{ background: recents ? "#00A0FF" : "" }} className='casinolobby_categery_button'>
+                <img src='/assets/images/CasinoLobby/recent.svg' />
                 <div>Recents</div>
-              </button>
+              </NavLink>
             </div>
             <div className='casinolobby_search_div'>
               <div>
-                <img src="\assets\images\CasinoLobby\search.png" alt='' />
+                <img src="/assets/images/CasinoLobby/search.png" alt='' />
               </div>
               <input placeholder='Search your game' />
             </div>
           </div>
         </div>
-        {/* <originalCard/> */}
-        <OriginalCard />
-        {/* <SlotCard/> */}
-        <SlotCard />
-        {/* <Providers/> */}
-        <ProvidersCard />
-        {/* <Live Casino/> */}
-        <LiveCasino />
-        {/* <New release/> */}
-        <NewReleaseCard />
-        {/* <Game Shows/> */}
-        <GameShowCard />
-        {/* < My Bets /> */}
-        <BetList />
-        <CakeOriginalCard />
+        <div>
+          <Outlet />
+        </div>
         <Footer />
       </div>
     </div>
