@@ -74,6 +74,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  overflow-y: scroll;
   position: relative;
   z-index: -1;
 }
@@ -131,5 +132,4 @@ body {
 }
 .swiper-wrapper{
   z-index: 0 !important;
-
 }

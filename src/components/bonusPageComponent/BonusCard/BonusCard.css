@@ -1,0 +1,17 @@
+.bonuscard{
+    width: 100%;
+    background-color: var(--primary-background);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.bonuscard >.bonuscard{
+    font-size: 24px;
+}
+.bonuscard >.price{
+    font-size: 32px;
+    font-weight: bold;
+    color:var(--button-color) ;
+}

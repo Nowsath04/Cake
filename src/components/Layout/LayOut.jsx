@@ -11,7 +11,7 @@ const LayOut = ({ children }) => {
       <NavBar />
       <div className="layer_2">
         <SideBar className="sidebar"/>
-        <div className="content">{children}</div>
+        <div className="content">{children} </div>
         {isChatVisible &&  
          <Chat  />
         }
