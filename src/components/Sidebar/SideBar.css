@@ -33,6 +33,8 @@
 
 
 .bonus {
+  text-decoration: none;
+  color: #ffff;
   cursor: pointer;
   padding: 4px 8px;
   background: linear-gradient(96.18deg, #1e5c96 2.26%, #00a0ff 100%);
@@ -92,6 +94,8 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
+  text-decoration: none;
+  color: #8CA3B8;
 }
 
 
@@ -108,6 +112,10 @@
 
 .casino_subheadings {
   border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
 .casino_section {
@@ -209,4 +217,8 @@
 
 .nav_small_icon_active:hover .large_tooltip {
   visibility: visible;
+}
+
+ .nav__active{
+  background-color: #455b70 !important;
 }

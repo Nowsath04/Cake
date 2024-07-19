@@ -7,6 +7,7 @@ import {
 import NavCard from "../navcard/NavCard";
 import { useSelector } from "react-redux";
 import NavToolTip from "../NavToolTip/NavToolTip";
+import { Link, NavLink } from "react-router-dom";
 const SideBar = () => {
   const { isNavVisible } = useSelector((state) => state.navReducer);
 
@@ -55,19 +56,19 @@ const SideBar = () => {
           </div>
           {topNavDetails.map((value, index) => {
             return (
-              <div className="bonus" key={index}>
+              <Link to={value.to} className="bonus" key={index}>
                 <div className="bonus_left">
                   <img src={value.img} alt="" />
                   <p>{value.lable}</p>
                 </div>
                 <p className="bonus_right">{value.count}</p>
-              </div>
+              </Link>
             );
           })}
           {casino && (
             <div
               className="casino_section"
-              style={{ height: casinoActive ? "427px" : "40px" }}
+              style={{ height: casinoActive ? "440px" : "40px" }}
             >
               <div className="casino_main">
                 <div className="casino_left">
@@ -87,10 +88,12 @@ const SideBar = () => {
                 <NavCard
                   image={"/assets/images/sidebar/icons/favour.png"}
                   lable={"Favorites"}
+                  to={"/casino/favourite"}
                 />
                 <NavCard
                   image={"/assets/images/sidebar/icons/recent.png"}
                   lable={"Recent"}
+                  to={"/casino/recents"}
                 />
               </div>
               <div className="casino_subheadings">
@@ -100,6 +103,7 @@ const SideBar = () => {
                       image={value.img}
                       lable={value.lable}
                       key={index}
+                      to={value.to}
                     />
                   );
                 })}
@@ -151,10 +155,13 @@ const SideBar = () => {
           <NavCard
             image={"/assets/images/sidebar/icons/blog.png"}
             lable={"Blog"}
+            to={"/casino/blog"}
           />
           <NavCard
             image={"/assets/images/sidebar/icons/live-footer.png"}
             lable={"Live"}
+            to={"/casino/live"}
+
           />
         </div>
       ) : (
