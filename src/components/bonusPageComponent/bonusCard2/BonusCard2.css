@@ -1,0 +1,38 @@
+.bonuscard2{
+    flex: 1;
+    background-color: var(--secondary-background);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 10px;
+}
+.bonuscard2 >h3{
+    font-size: 24px;
+    text-align: center;
+}
+.bonuscard2 >p{
+    font-size: 18px;
+
+    
+}
+.bonuscard2 >p>span{
+    color: var( --btn-color);
+    margin-left: 5px;
+}
+.bonuscard2>.bonus_btn{
+    display: flex;
+    gap: 10px;
+}
+.bonuscard2>.bonus_btn>button{
+    width: 104px;
+    height: 32px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--btn-color);
+    color: white;
+    cursor: pointer;
+}

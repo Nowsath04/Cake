@@ -1,6 +1,9 @@
 .bonus_main{
-    padding: 40px;
+    height: calc(100vh - 70px);
+    padding: 25px;
     display: flex;
     flex-direction: column;
     gap: 33px;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }

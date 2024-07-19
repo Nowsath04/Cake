@@ -9,8 +9,8 @@ const Chat = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="chat" style={{ width: minimize ? "232px" : "368px" }}>
-      <div className="chat_nav" style={{ width: minimize ? "232px" : "368px" }}>
+    <div className="chat" style={{ width: minimize ? "232px" : "325px" }}>
+      <div className="chat_nav" style={{ width: minimize ? "232px" : "325px" }}>
         <img src="\assets\images\chat\image\info.svg" alt="" />
         <img
           src="\assets\images\chat\image\minimize.svg"
