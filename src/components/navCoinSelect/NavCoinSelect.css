@@ -1,16 +1,45 @@
-.navcoinselect{
-    width: auto;
-    padding: 5px 12px;
-    background-color: var(--secondary-background);
-    border-radius: 10px;
+.navcoinselect {
+  width: auto;
+  padding: 5px 12px;
+  background-color: var(--secondary-background);
+  border-radius: 10px;
 }
-.nav_select{
+.nav_select {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.nav_select_left {
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+}
+.allnav_coin {
+  width: 200px;
+  position: absolute;
+  top: 80px;
+  border-radius: 10px;
+  z-index: 2;
+  border: 1px solid var(--border-color);
+  background-color: var(--secondary-background);
+  padding: 4px 0 15px 0;
+}
+.top_section{
+    border-bottom: 1px solid var(--icon-background);
+}
+.bottom_section{
     display: flex;
-    gap: 18px;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 16px;
+    gap: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
 }
-.nav_select_left{
-    cursor: pointer;
-    display: flex;
-    gap: 8px;
+.bottom_section:hover{
+
+    background-color: var(--icon-background);
+
 }
+

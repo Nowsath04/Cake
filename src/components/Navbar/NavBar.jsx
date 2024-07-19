@@ -1,35 +1,55 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { IoMdArrowDropup } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleNav } from "../../sclices/navSlice";
+import { coinSelect, toggleNav } from "../../sclices/navSlice";
 import { showChat } from "../../sclices/chatSlice";
 import NavCoinSelect from "../navCoinSelect/NavCoinSelect";
 const NavBar = () => {
-  const [loged, setLogoed] = useState(true);
+  const [loged, setLogoed] = useState(false);
   const dispatch = useDispatch();
-  const {isNavVisible} = useSelector((state) => state.navReducer);
-  const {isChatVisible} = useSelector((state) => state.chatReducer);
-
+  const { isNavVisible, slectedCoin } = useSelector(
+    (state) => state.navReducer
+  );
+  const { isChatVisible } = useSelector((state) => state.chatReducer);
+  const value = {
+    name: "BNB",
+    price: "00.2",
+    icon: "public/assets/images/nav/icon/BNB.svg",
+  };
+  useEffect(() => {
+    dispatch(coinSelect(value));
+  }, []);
   return (
     <header className="navbar">
       <nav className="nav_container">
         <div className="nav_left">
-          <img src="\assets\images\nav\icon\Group 13717.png" alt="" style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }} onClick={() => dispatch(toggleNav())} />
+          <img
+            src="\assets\images\nav\icon\Group 13717.png"
+            alt=""
+            style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }}
+            onClick={() => dispatch(toggleNav())}
+          />
           <a href="#">
             <img src="\assets\images\nav\Frame 96.svg" alt="icon" />
           </a>
         </div>
         <div className="nav_center">
-          <NavCoinSelect/>
+          <NavCoinSelect />
         </div>
         <div className="nav_right">
           {!loged && (
             <div className="nav_right_login">
-             {
-                    isChatVisible?"":  <img src="\assets\images\nav\icon\Frame.png" alt=""  onClick={()=>dispatch(showChat())}/>
-                  }
+              {isChatVisible ? (
+                ""
+              ) : (
+                <img
+                  src="\assets\images\nav\icon\Frame.png"
+                  alt=""
+                  onClick={() => dispatch(showChat())}
+                />
+              )}
               <button className="btn login_btn">LOGIN</button>
               <button className="btn register_btn">REGISTER</button>
             </div>
@@ -38,9 +58,15 @@ const NavBar = () => {
             <div className="info_box">
               {loged && (
                 <div className="nav_info_icon">
-                  {
-                    isChatVisible?"":  <img src="\assets\images\nav\icon\Frame.png" alt=""  onClick={()=>dispatch(showChat())}/>
-                  }
+                  {isChatVisible ? (
+                    ""
+                  ) : (
+                    <img
+                      src="\assets\images\nav\icon\Frame.png"
+                      alt=""
+                      onClick={() => dispatch(showChat())}
+                    />
+                  )}
                   <img src="\assets\images\nav\icon\search.png" alt="" />
                   <img src="\assets\images\nav\icon\user.png" alt="" />
                 </div>
