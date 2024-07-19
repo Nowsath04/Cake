@@ -13,13 +13,17 @@
     /* Remove margin for the last slide */
 }
 
+.slider-container .swiper-pagination {
+    display: none !important;
+}
+
+
 .slider-container {
-    width: 100% !important;
     padding: 12px;
     overflow-x: hidden !important;
     background: #072537;
     border-radius: 10px;
-    margin: 26px 0 40px 0;
+    margin: 26px 40px 40px 40px;
 }
 
 .slider-container .slick-list {

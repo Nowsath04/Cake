@@ -1,5 +1,5 @@
 .layer_1 {
-  width:100vw;
+  width: 100vw;
 }
 
 .layer_2 {
@@ -8,12 +8,11 @@
 }
 
 .content {
-  
-  flex: 1; 
+
+  flex: 1;
   overflow-y: auto;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   position: relative;
-  
-}
 
+}

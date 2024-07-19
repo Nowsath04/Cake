@@ -1,3 +1,7 @@
+.ogcard_maindiv {
+    margin: 0 40px;
+}
+
 .orginal_CakeCard_div {
     overflow-y: visible !important;
     padding-top: 40px;

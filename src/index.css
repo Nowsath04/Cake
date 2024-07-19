@@ -55,8 +55,8 @@
   /*   button-color  ( 14px ) */
 
   --button-color: #00A0FF;
-/* font color */
- --primary-font-color:#8CA3B8
+  /* font color */
+  --primary-font-color: #8CA3B8
 }
 
 * {
@@ -120,9 +120,63 @@ body {
 
 
 @media screen and (min-width: 1800px) {
-  .casino_div {
+  .Footer_div {
+    width: 1136px !important;
+    margin: 40px auto auto auto !important;
+  }
+
+  .homescreen_div {
+    width: 1136px !important;
+  }
+
+  .homebanner_div {
     width: 1136px !important;
     margin: 40px auto !important;
-    ;
   }
+
+  .gotoCard_maindiv {
+    width: 1136px !important;
+    margin: 80px auto 40px auto !important;
+  }
+
+  .HomePayBanner_div {
+    width: 1056px !important;
+    margin: 80px auto !important;
+  }
+
+  .home_table_div {
+    margin: auto auto 80px auto;
+    width: 1136px !important;
+  }
+
+  .bet_table_div {
+    width: 1136px !important;
+    margin: 0 auto;
+  }
+
+  .HomeParagraph_div {
+    width: 1056px !important;
+    margin: 0 auto;
+  }
+
+  .ogcard_maindiv {
+    width: 1056px !important;
+    margin: 0 auto;
+  }
+
+  .casinolobby_div {
+    margin: 0 auto;
+    width: 1056px !important;
+  }
+
+  .slider-container {
+    width: 1056px !important;
+    margin: 26px auto 40px auto;
+  }
+
+  .casino_heading {
+    width: 1056px !important;
+    margin: 40px auto;
+  }
+
 }

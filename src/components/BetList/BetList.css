@@ -16,6 +16,10 @@
     margin-top: 40px;
 }
 
+.casinolobby_div {
+    margin: 0 40px;
+}
+
 .casinolobby_bet_button div {
     white-space: nowrap;
 }
@@ -38,6 +42,7 @@
 
 .bet_table_div {
     width: 100%;
+    padding: 0 40px;
     border-collapse: separate;
     border-spacing: 0 10px;
     height: 48px;

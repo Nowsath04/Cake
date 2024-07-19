@@ -33,15 +33,17 @@
 }
 
 
-.casino_div {
-    margin: 40px;
-}
+/* .casino_div {
+    padding: 0 40px;
+    margin: 40px 0 0 0;
+} */
 
 
 .casino_heading {
     font-size: var(--mainHeading-font-size);
     color: var(--mainHeading-color);
     font-weight: var(--mainHeading-font-weight);
+    margin: 40px 40px;
 }
 
 

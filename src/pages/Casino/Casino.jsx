@@ -9,6 +9,7 @@ import NewReleaseCard from '../../components/NewReleaseCard/NewReleaseCard';
 import GameShowCard from '../../components/GameShowCard/GameShowCard';
 import BetList from '../../components/BetList/BetList';
 import CakeOriginalCard from '../../components/cake-original-loading-card/CakeOriginalCard';
+import Footer from '../../components/Footer/Footer';
 
 
 function Casino() {
@@ -133,6 +134,7 @@ function Casino() {
         {/* < My Bets /> */}
         <BetList />
         <CakeOriginalCard />
+        <Footer />
       </div>
     </div>
   )

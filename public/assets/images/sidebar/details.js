@@ -13,7 +13,7 @@ export const topNavDetails = [
 
 export const casinoGameDetails = [
   {
-    lable: "Rake Originals",
+    lable: "Cake Originals",
     img: "/assets/images/sidebar/icons/cake.png",
   },
   {

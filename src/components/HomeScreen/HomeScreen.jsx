@@ -6,7 +6,7 @@ function HomeScreen() {
     return (
         <div className='homescreen_maindiv'>
             <div className='homescreen_div'>
-                <div className='mainHeading'>Welcome to Rake - <span>Online sports betting & Casino!</span></div>
+                <div className='mainHeading'>Welcome to Cake - <span>Online sports betting & Casino!</span></div>
                 <div className='homescreen_btn_div'>
                     <Link className="btn register_home_btn">Register now</Link>
                     <div className='continueOr'>Or continue with</div>

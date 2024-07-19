@@ -1,0 +1,26 @@
+.HomeTableSheet_maindiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeTableSheet_div {
+    width: 262px;
+    padding: 6px;
+    background: var(--primary-background);
+    border-radius: 10px;
+
+}
+
+
+.HomeTableSheet_btn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.HomeTableSheet_btn_div button {
+    width: 120px;
+}

@@ -1,0 +1,25 @@
+.HomePayBanner_div {
+    margin: 80px 40px;
+    background: var(--primary-background);
+    padding: 24px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.HomePayBanner_img_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.HomePayBanner_btn {
+    width: 169px;
+    text-decoration: none;
+    text-align: center;
+}
