@@ -34,8 +34,8 @@ export default function HomeBanner() {
                     <SwiperSlide>
                         <div className='Homebanner_card'>
                             <div className='swiper-button-prev-banner_div'>
-                                <button className='swiper-button-prev-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
-                                <button className='swiper-button-next-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-prev-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-next-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
                             </div>
                             <div className='Homebanner_card_img_wrapper'>
                                 <img className='Homebanner_card_img' src='\assets\images\CasinoLobby\banner-1.png' alt='' />
@@ -49,8 +49,8 @@ export default function HomeBanner() {
                     <SwiperSlide>
                         <div className='Homebanner_card'>
                             <div className='swiper-button-prev-banner_div'>
-                                <button className='swiper-button-prev-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
-                                <button className='swiper-button-next-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-prev-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-next-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
                             </div>
                             <div className='Homebanner_card_img_wrapper'>
                                 <img className='Homebanner_card_img' src='\assets\images\CasinoLobby\banner-1.png' alt='' />
@@ -64,8 +64,8 @@ export default function HomeBanner() {
                     <SwiperSlide>
                         <div className='Homebanner_card'>
                             <div className='swiper-button-prev-banner_div'>
-                                <button className='swiper-button-prev-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
-                                <button className='swiper-button-next-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-prev-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-next-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
                             </div>
                             <div className='Homebanner_card_img_wrapper'>
                                 <img className='Homebanner_card_img' src='\assets\images\CasinoLobby\banner-1.png' alt='' />
@@ -79,8 +79,8 @@ export default function HomeBanner() {
                     <SwiperSlide>
                         <div className='Homebanner_card'>
                             <div className='swiper-button-prev-banner_div'>
-                                <button className='swiper-button-prev-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
-                                <button className='swiper-button-next-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-prev-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-next-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
                             </div>
                             <div className='Homebanner_card_img_wrapper'>
                                 <img className='Homebanner_card_img' src='\assets\images\CasinoLobby\banner-1.png' alt='' />
@@ -94,8 +94,8 @@ export default function HomeBanner() {
                     <SwiperSlide>
                         <div className='Homebanner_card'>
                             <div className='swiper-button-prev-banner_div'>
-                                <button className='swiper-button-prev-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
-                                <button className='swiper-button-next-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-prev-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-next-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
                             </div>
                             <div className='Homebanner_card_img_wrapper'>
                                 <img className='Homebanner_card_img' src='\assets\images\CasinoLobby\banner-1.png' alt='' />
@@ -109,8 +109,8 @@ export default function HomeBanner() {
                     <SwiperSlide>
                         <div className='Homebanner_card'>
                             <div className='swiper-button-prev-banner_div'>
-                                <button className='swiper-button-prev-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
-                                <button className='swiper-button-next-banner'><img src='public\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-prev-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
+                                <button className='swiper-button-next-banner'><img src='\assets\images\CasinoLobby\arrow-banner.svg' alt='' /></button>
                             </div>
                             <div className='Homebanner_card_img_wrapper'>
                                 <img className='Homebanner_card_img' src='\assets\images\CasinoLobby\banner-1.png' alt='' />
