@@ -22,11 +22,14 @@ import General from "./components/SettingsComponent/General/General";
 import Security from "./components/SettingsComponent/Security/Security";
 import Preferences from "./components/SettingsComponent/Preferences/Preferences";
 import Blacklist from "./components/SettingsComponent/Blacklist/Blacklist";
+import { ToastContainer } from "react-toastify";
+
 
 function App() {
   return (
     <>
       <div className="App">
+        <ToastContainer />
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<LayOut> <Home /></LayOut>} />

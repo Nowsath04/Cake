@@ -10,6 +10,10 @@ import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import Otp from "../../pages/Register/Otp";
 import Web3 from "web3";
+import { toast } from "react-toastify";
+import axios from "axios";
+import { API_URL } from "../../../constants/Url";
+
 
 const NavBar = () => {
   const [loged, setLogoed] = useState(false);
@@ -18,6 +22,12 @@ const NavBar = () => {
   const [register, setRegister] = useState(false)
   const [userDropdown, setUserDropdown] = useState(false);
   const dispatch = useDispatch();
+
+  const [userActive, setuserActive] = useState(false);
+  const [balances, setBalance] = useState("");
+
+
+
   const web3 = new Web3(window.ethereum)
 
   const { isNavVisible, slectedCoin } = useSelector(
@@ -35,10 +45,47 @@ const NavBar = () => {
         const networkId = await web3.eth.net.getId()
         console.log(networkId);
 
+        if (networkId != "0x13882") {
+          try {
+            await web3.currentProvider.request({
+              method: "wallet_switchEthereumChain",
+              params: [{ chainId: "0x13882" }] // Amoy Testnet chain ID
+            });
+          } catch (error) {
+            toast.error("Please Add Amoy Testnet to your metamask.")
+            return console.error("Error switching to Amoy network:", error);
+          }
+        }
+        const account = await window.ethereum.request({
+          method: "eth_requestAccounts"
+        })
+
+        const address1 = account[0]
+        const address = web3.toChecksumAddress(address1)
+
+        try {
+          const { data } = await axios.post(
+            `${API_URL}/user/generate-nonce`,
+            { userid: address },
+            { withCredentials: true }
+          )
+          console.log(data);
+          const nonce = data.user.nonce
+
+          // create sign and send sign nonce and userid to BE
+
+          const msg = `Welcome to Cake\n\nThis request will not trigger a blockchain\ntransaction or cost any gas fees.\n\nYour authentication status will reset after 24 hours.\n\nWallet address:${address}\nNonce:${nonce}`;
+          const signature = await web3.eth.personal.sign(msg, address, nonce)
+          setuserActive(true);
+        } catch (error) {
+
+        }
+
+
+
       } catch (error) {
 
       }
-
 
     }
 
@@ -97,7 +144,7 @@ const NavBar = () => {
               {
                 register ? <Register setLogin={setLogin} setRegister={setRegister} /> : ""
               }
-              <Link onClick={() => { setOtp(!otp) }} className="btn register_btn">Otp</Link>
+              <Link onClick={connectWallet} className="btn register_btn">Otp</Link>
               {/* {
                   otp ? <Otp setOtp={setOtp} setRegister={setRegister} /> : ""
                 } */}
