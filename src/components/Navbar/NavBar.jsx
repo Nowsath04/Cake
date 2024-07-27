@@ -1,18 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoMdArrowDropup } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { coinSelect, toggleNav } from "../../sclices/navSlice";
 import { showChat } from "../../sclices/chatSlice";
 import NavCoinSelect from "../navCoinSelect/NavCoinSelect";
+import Login from "../../pages/Login/Login";
+import Register from "../../pages/Register/Register";
+import Otp from "../../pages/Register/Otp";
+import Web3 from "web3";
+
 const NavBar = () => {
-  const [loged, setLogoed] = useState(true);
+  const [loged, setLogoed] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [otp, setOtp] = useState(false);
+  const [register, setRegister] = useState(false)
   const [userDropdown, setUserDropdown] = useState(false);
   const dispatch = useDispatch();
+  const web3 = new Web3(window.ethereum)
+
   const { isNavVisible, slectedCoin } = useSelector(
     (state) => state.navReducer
   );
+
+  // connect wallet Function - metamask
+
+  const connectWallet = async () => {
+
+    if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
+
+      try {
+
+        const networkId = await web3.eth.net.getId()
+        console.log(networkId);
+
+      } catch (error) {
+
+      }
+
+
+    }
+
+  }
+
+
+
   const { isChatVisible } = useSelector((state) => state.chatReducer);
   const value = {
     name: "BNB",
@@ -24,7 +57,6 @@ const NavBar = () => {
     setUserDropdown(!userDropdown);
   }
 
-
   useEffect(() => {
     dispatch(coinSelect(value));
   }, []);
@@ -33,7 +65,7 @@ const NavBar = () => {
       <nav className="nav_container">
         <div className="nav_left">
           <img
-            src="\assets\images\nav\icon\Group 13717.png"
+            src="\assets\images\nav\icon\side-mob.svg"
             alt=""
             style={{ transform: `rotate(${isNavVisible ? "0deg" : "180deg"})` }}
             onClick={() => dispatch(toggleNav())}
@@ -57,8 +89,18 @@ const NavBar = () => {
                   onClick={() => dispatch(showChat())}
                 />
               )}
-              <button className="btn login_btn">LOGIN</button>
-              <button className="btn register_btn">REGISTER</button>
+              <Link onClick={() => { setLogin(!login) }} className="btn login_btn">LOGIN</Link>
+              {
+                login ? <Login setLogin={setLogin} /> : ""
+              }
+              <Link onClick={() => { setRegister(!register) }} className="btn register_btn">REGISTER</Link>
+              {
+                register ? <Register setLogin={setLogin} setRegister={setRegister} /> : ""
+              }
+              <Link onClick={() => { setOtp(!otp) }} className="btn register_btn">Otp</Link>
+              {/* {
+                  otp ? <Otp setOtp={setOtp} setRegister={setRegister} /> : ""
+                } */}
             </div>
           )}
           <div className="nav_right_info">
@@ -69,14 +111,15 @@ const NavBar = () => {
                     ""
                   ) : (
                     <img
-                      src="\assets\images\nav\icon\Frame.png"
+                      src="\assets\images\nav\icon\chat.svg"
+
                       alt=""
                       onClick={() => dispatch(showChat())}
                     />
                   )}
                   <div className="user_images_div">
-                    <img src="\assets\images\nav\icon\search.png" alt="" />
-                    <img className="user_image" src="\assets\images\nav\icon\user.png" alt="" onClick={HandleProfileDropdown} />
+                    <img src="\assets\images\nav\icon\search.svg" alt="" />
+                    <img className="user_image" src="\assets\images\nav\icon\profile.svg" alt="" onClick={HandleProfileDropdown} />
                     {
                       <div className="user_dropdown_maindiv" style={{ height: userDropdown ? "458px" : "0px" }}>
                         <div className="user_dropdown_top_div">
@@ -85,7 +128,7 @@ const NavBar = () => {
                           <div className="user_dropdown_top_progressBar"><span></span></div>
                         </div>
                         <div className="user_dropdown_list_div">
-                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\profile.svg" alt="" /> Profile</button>
+                          <NavLink to={"/settings/general"} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\profile.svg" alt="" /> Profile</NavLink>
                           <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\wallet.svg" alt="" /> Wallet</button>
                           <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\deposit.svg" alt="" /> Deposit</button>
                           <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\withdraw.svg" alt="" /> Withdraw</button>
@@ -93,7 +136,7 @@ const NavBar = () => {
                           <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\affiliate.svg" alt="" /> Affiliate</button>
                           <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\rank.svg" alt="" /> Rank</button>
                           <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\liveSupport.svg" alt="" /> Live Support</button>
-                          <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\settings.svg" alt="" /> Settings</button>
+                          <NavLink className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\settings.svg" alt="" /> Settings</NavLink>
                           <button className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\signOut.svg" alt="" /> Sign Out</button>
                         </div>
                       </div>
@@ -102,7 +145,7 @@ const NavBar = () => {
                 </div>
               )}
               <div className="info_box_details">
-                <img src="\assets\images\nav\Layer_1.png" alt="" />
+                <img src="\assets\images\nav\cake.com.svg" alt="" />
                 <div className="details">
                   <div className="coin_price">
                     <p>Cake coin</p>

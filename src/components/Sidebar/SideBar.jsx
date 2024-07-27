@@ -68,15 +68,15 @@ const SideBar = () => {
           {casino && (
             <div
               className="casino_section"
-              style={{ height: casinoActive ? "440px" : "40px" }}
+              style={{ height: casinoActive ? "476px" : "40px" }}
             >
               <div className="casino_main">
                 <div className="casino_left">
-                  <img src="\assets\images\sidebar\icons\casino.png" alt="" />
+                  <img src="\assets\images\sidebar\icons\casino.svg" alt="" />
                   <p>Casino</p>
                 </div>
                 <img
-                  src="\assets\images\sidebar\icons\arrow.png"
+                  src="\assets\images\sidebar\icons\arrow.svg"
                   style={{
                     transform: `rotate(${!casinoActive ? "0deg" : "180deg"})`,
                   }}
@@ -86,12 +86,12 @@ const SideBar = () => {
               </div>
               <div className="casino_subheading">
                 <NavCard
-                  image={"/assets/images/sidebar/icons/favour.png"}
+                  image={"/assets/images/sidebar/icons/favor.svg"}
                   lable={"Favorites"}
                   to={"/casino/favourite"}
                 />
                 <NavCard
-                  image={"/assets/images/sidebar/icons/recent.png"}
+                  image={"/assets/images/sidebar/icons/recent.svg"}
                   lable={"Recent"}
                   to={"/casino/recents"}
                 />
@@ -153,12 +153,12 @@ const SideBar = () => {
             </div>
           )}
           <NavCard
-            image={"/assets/images/sidebar/icons/blog.png"}
+            image={"/assets/images/sidebar/icons/blog.svg"}
             lable={"Blog"}
             to={"/casino/blog"}
           />
           <NavCard
-            image={"/assets/images/sidebar/icons/live-footer.png"}
+            image={"/assets/images/sidebar/icons/live.svg"}
             lable={"Live"}
             to={"/casino/live"}
 
@@ -167,28 +167,28 @@ const SideBar = () => {
       ) : (
         <div className="nav_small">
           <a href="#">
-            <img src="/assets/images/sidebar/images/bonus.png" alt="" />
+            <img src="/assets/images/sidebar/icons/bonus.svg" alt="" />
           </a>
           <a href="#">
-            <img src="/assets/images/sidebar/images/spin.png" alt="" />
+            <img src="/assets/images/sidebar/icons/spin.svg" alt="" />
           </a>
           <a href="#" className="nav_small_icon nav_small_icon_active">
             <div className="large_tooltip">
               <NavToolTip data={casinoGameDetails} heading={"Casino"} />
             </div>
-            <img src="/assets/images/sidebar/icons/casino.png" alt="" />
+            <img src="/assets/images/sidebar/icons/casino.svg" alt="" />
           </a>
           <a href="#" className="nav_small_icon first">
             <div className="tooltip_live">
               <span className="tooltiptext_live">Blog</span>
             </div>
-            <img src="/assets/images/sidebar/icons/blog.png" alt="" />
+            <img src="/assets/images/sidebar/icons/blog.svg" alt="" />
           </a>
           <a href="#" className="nav_small_icon second">
             <div className="tooltip_live">
               <span className="tooltiptext_live">Live</span>
             </div>
-            <img src="/assets/images/sidebar/icons/live-footer.png" alt="" />
+            <img src="/assets/images/sidebar/icons/live.svg" alt="" />
           </a>
         </div>
       )}

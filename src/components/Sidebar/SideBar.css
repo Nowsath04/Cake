@@ -80,6 +80,7 @@
 
 .casino_main>img {
   transition: all 0.3s ease-in-out;
+  rotate: -180deg;
 }
 
 .casino_subheading {
@@ -109,6 +110,12 @@
   align-items: center;
   gap: 8px;
 }
+
+.casino_sub_left img {
+  width: 18px;
+  height: 18px;
+}
+
 
 .casino_subheadings {
   border-bottom: 1px solid var(--border-color);
@@ -219,6 +226,6 @@
   visibility: visible;
 }
 
- .nav__active{
+.nav__active {
   background-color: #455b70 !important;
 }

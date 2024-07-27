@@ -5,39 +5,6 @@
     height: calc(100vh - 70px);
 }
 
-/* Scrollbar styling for WebKit-based browsers (Chrome, Safari) and Microsoft Edge */
-.casino_maindiv::-webkit-scrollbar {
-    width: 5px;
-    /* Adjust the width of the scrollbar */
-}
-
-.casino_maindiv::-webkit-scrollbar-track {
-    background: #072537;
-    /* Color of the track */
-}
-
-.casino_maindiv::-webkit-scrollbar-thumb {
-    background-color: #072537 !important;
-    border-radius: 10px;
-    border: 2px solid #f1f1f1;
-}
-
-/* Scrollbar styling for Firefox */
-.casino_maindiv {
-    scrollbar-width: none;
-    scrollbar-color: #072537 #04141E;
-}
-
-.casino_maindiv {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-
-/* .casino_div {
-    padding: 0 40px;
-    margin: 40px 0 0 0;
-} */
-
 
 .casino_heading {
     font-size: var(--mainHeading-font-size);
@@ -61,9 +28,10 @@
     gap: 10px;
     margin-bottom: 40px;
     overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: none;
+    scrollbar-color: #072537 #04141E;
+
 }
+
 
 .casinolobby_categery_button div {
     white-space: nowrap;

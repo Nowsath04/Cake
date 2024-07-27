@@ -19,7 +19,7 @@
 .nav_left {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .nav_left>img {
@@ -206,6 +206,7 @@
   padding: 11px 0 11px 13px;
   cursor: pointer;
   transition: 0.7s ease;
+  text-decoration: none;
 }
 
 .user_dropdown_list_button:hover {
