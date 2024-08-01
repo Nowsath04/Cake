@@ -1,117 +1,130 @@
-import React, { useEffect, useRef, useState } from 'react'
-import "./Register.css"
+import React, { useEffect, useState } from 'react';
+import { useFormik } from "formik";
+import "./Register.css";
 import { IoIosClose } from "react-icons/io";
+import { basicSchema } from '../../ValidationSchema';
+import { useDispatch } from 'react-redux';
+import { userDetailError, userDetailRequest, userDetailSuccess } from '../../sclices/userDetailsSlice';
+import axios from 'axios';
+import { API_URL } from '../../../constants/Url';
 
+const Register = ({ setRegister }) => {
+    const dispatch = useDispatch();
 
-function Register({ setRegister, setLogin }) {
+    const [isChecked, setIsChecked] = useState(false);
 
-    const [pass, setPass] = useState(false)
-    const menuRef = useRef()
+    const handleCheckboxChange = (event) => {
+        setIsChecked(event.target.checked);
+    };
 
-    useEffect(() => {
-        var handleLogin = (e) => {
-            if (!menuRef.current.contains(e.target)) {
-                setRegister(false);
-            }
-        };
-        document.addEventListener("mousedown", handleLogin)
+    const onSubmit = async (values, actions) => {
+        try {
+            dispatch(userDetailRequest());
+            const { data } = await axios.post(
+                `${API_URL}/user/user-details`, values,
+                { withCredentials: true }
+            );
+            console.log(data.user);
+            dispatch(userDetailSuccess(data.user));
+            actions.resetForm()
+            setRegister(false);
+            window.location.reload("/")
+        } catch (error) {
+            dispatch(userDetailError(error));
+        }
+    };
+
+    const formik = useFormik({
+        initialValues: {
+            name: "",
+            email: "",
+            phoneno: "",
+            dateofbirth: ""
+        },
+        validationSchema: basicSchema,
+        onSubmit: (values, actions) => onSubmit(values, actions, dispatch),
     });
 
-    const handleClose = () => {
-        setRegister(false);
-        setLogin(false)
-    }
-
-    const handleLogin = () => {
-        setLogin(true)
-        setRegister(false);
-    }
-
+    const { values, handleBlur, handleChange, errors, handleSubmit, touched, isSubmitting } = formik;
 
     return (
         <>
             <div className='Login_maindiv'>
-                <div ref={menuRef} className='Login_div'>
+                <form onSubmit={handleSubmit} autoComplete='off' className='Login_div'>
                     <div className='Login_in_div'>
                         <div className='login_logo_div'>
                             <img src="\assets\images\nav\Frame 96.svg" alt='' />
-                            <div onClick={handleClose}><IoIosClose className='close_icon' /></div>
+                            {/* <div onClick={handleClose}><IoIosClose className='close_icon' /></div> */}
                         </div>
-                        <div className='Login_heading'>REGISTRATION</div>
+                        <div className='Login_heading'>User Details</div>
                         <div className='Login_input_div'>
-                            <div>Username<span>*</span></div>
-                            <input />
-                        </div>
-                        <div className='Login_input_div'>
-                            <div>Password<span>*</span></div>
-                            <div className='Login_input_div_password'>
-                                <input type={pass ? "text" : "password"} />
-                                {
-                                    pass ? <img className='eye_img' onClick={() => setPass(false)} src='\assets\images\Login\eyeCrossed.svg' alt='' />
-                                        : <img className='eye_img' onClick={() => setPass(true)} src='\assets\images\Login\eye.svg' alt='' />
-
-                                }
-                            </div>
+                            <div>Name <span>*</span></div>
+                            <input
+                                id='name'
+                                type='text'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.name}
+                                className={errors.name && touched.name ? "input_error" : ""}
+                            />
+                            {errors.name && touched.name ? <p className='formik_error'>{errors.name}</p> : ""}
                         </div>
                         <div className='Login_input_div'>
-                            <div>Date of birth<span>*</span></div>
-                            <div className='date_of_birth_div'>
-                                <input placeholder="DD" type="" />
-                                <select name="month" placeholder="Month">
-                                    <option value="1">Jan</option>
-                                    <option value="2">Feb</option>
-                                    <option value="3">Mar</option>
-                                    <option value="4">Apr</option>
-                                    <option value="5">May</option>
-                                    <option value="6">Jun</option>
-                                    <option value="7">Jul</option>
-                                    <option value="8">Aug</option>
-                                    <option value="9">Sept</option>
-                                    <option value="10">Oct</option>
-                                    <option value="11">Nov</option>
-                                    <option value="12">Dec</option>
-                                </select>
-                                <input placeholder="YYYY" type="" />
-                            </div>
+                            <div>Email <span>*</span></div>
+                            <input
+                                id='email'
+                                type="email"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.email}
+                                className={errors.email && touched.email ? "input_error" : ""}
+                            />
+                            {errors.email && touched.email ? <p className='formik_error'>{errors.email}</p> : ""}
                         </div>
                         <div className='Login_input_div'>
-                            <div>Email<span>*</span></div>
-                            <input type="password" />
+                            <div>Phone No <span>*</span></div>
+                            <input
+                                type="number"
+                                id='phoneno'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.phoneno}
+                                className={errors.phoneno && touched.phoneno ? "input_error" : ""}
+                            />
+                            {errors.phoneno && touched.phoneno ? <p className='formik_error'>{errors.phoneno}</p> : ""}
                         </div>
                         <div className='Login_input_div'>
-                            <div>Code (optional)</div>
-                            <input type="password" />
+                            <div>Date Of Birth <span>*</span></div>
+                            <input
+                                type="date"
+                                id='dateofbirth'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.dateofbirth}
+                                className={errors.dateofbirth && touched.dateofbirth ? "input_error" : ""}
+                            />
+                            {errors.dateofbirth && touched.dateofbirth ? <p className='formik_error'>{errors.dateofbirth}</p> : ""}
                         </div>
                         <div className='reg_check_box_div'>
                             <div>
-                                <input type="checkbox" id="customCheckbox" />
-                                <label for="customCheckbox"></label>
+                                <input type="checkbox"
+                                    id="customCheckbox"
+                                    onChange={handleCheckboxChange}
+                                />
+                                <label htmlFor="customCheckbox"></label>
                             </div>
-                            <div>I read the <a>terms & conditions</a> and <a>privacy policy</a>, and I accept it*</div>
+                            <div>I read the <a href="#">terms & conditions</a> and <a href="#">privacy policy</a>, and I accept it*</div>
                         </div>
-                        <button className='btn reg_continue_btn'>CONFIRM</button>
-                        <div className='login_googleAuth'>
-                            <div className='login_continue'>Or continue with</div>
-                            <div className='login_google_img'>
-                                <div className='login_google_img_div'>
-                                    <img src='\assets\images\Login\google2.svg' />
-                                </div>
-                                <div className='login_google_img_div'>
-                                    <img src='\assets\images\Login\Facebook.svg' />
-                                </div>
-                                <div className='login_google_img_div'>
-                                    <img src='\assets\images\Login\Twitter.svg' />
-                                </div>
-                            </div>
-                            <div className='login_register_div'>
-                                <div>Do not have an account? <a onClick={handleLogin}>Login</a></div>
-                            </div>
-                        </div>
+                        <button
+                            type='submit'
+                            disabled={!isChecked || !formik.isValid || formik.isSubmitting}
+                            className={`btn reg_continue_btn ${isChecked && formik.isValid ? '' : 'reg_continue_btn_disabled'}`}
+                        >CONFIRM</button>
                     </div>
-                </div>
+                </form>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Register
+export default Register;

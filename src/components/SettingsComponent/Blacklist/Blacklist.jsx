@@ -3,8 +3,9 @@ import "./Blacklist.css"
 
 function Blacklist() {
     return (
-        <div>
-            Blacklist
+        <div className='General_div'>
+            <div className='General_heading'>Blacklist</div>
+            <p style={{ textAlign: "center" }}>Blacklist is empty</p>
         </div>
     )
 }

@@ -23,9 +23,18 @@ import Security from "./components/SettingsComponent/Security/Security";
 import Preferences from "./components/SettingsComponent/Preferences/Preferences";
 import Blacklist from "./components/SettingsComponent/Blacklist/Blacklist";
 import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import store from './store';
+import { useEffect } from "react";
+import { LoadingUser } from "./Actions/UserAction";
 
 
 function App() {
+
+  useEffect(() => {
+    store.dispatch(LoadingUser);
+  });
+
   return (
     <>
       <div className="App">

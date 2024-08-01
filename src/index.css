@@ -126,7 +126,14 @@ body {
   font-weight: 500;
 }
 
+.custom-toast {
+  background: var(--primary-background) !important;
+  color: white !important;
+}
 
+.Toastify__close-button>svg {
+  color: #8CA3B8 !important;
+}
 
 @media screen and (min-width: 1800px) {
   .Footer_div {

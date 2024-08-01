@@ -1,12 +1,20 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit" 
-import navReducer from "./sclices/navSlice" 
+import { configureStore, combineReducers } from "@reduxjs/toolkit"
+import navReducer from "./sclices/navSlice"
 import chatReducer from "./sclices/chatSlice"
-const reducer=combineReducers({
-navReducer:navReducer,
-chatReducer:chatReducer
+import auth from "./sclices/userSlice"
+import userDetailReducer from "./sclices/userDetailsSlice"
+import { thunk } from 'redux-thunk';
+
+const reducer = combineReducers({
+    navReducer: navReducer,
+    chatReducer: chatReducer,
+    auth: auth,
+    userDetailReducer: userDetailReducer
 })
 
-const store=configureStore({
-    reducer:reducer
+const store = configureStore({
+    reducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk)
+
 })
-export default store
+export default store;

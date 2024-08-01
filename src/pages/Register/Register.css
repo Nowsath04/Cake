@@ -69,6 +69,10 @@
     gap: 8px;
 }
 
+.reg_check_box_div input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .reg_check_box_div input {
     align-items: center;
     background-color: #072537 !important;
@@ -145,4 +149,46 @@
 
 .otp_heading {
     text-align: center;
+}
+
+.input_error {
+    border: 1px solid #ff4545 !important;
+}
+
+.reg_continue_btn_disabled:disabled {
+    opacity: 0.35 !important;
+}
+
+.formik_error {
+    color: #ff4545;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.Login_input_div input[type="number"]::-webkit-outer-spin-button,
+.Login_input_div input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.Login_input_div input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Webkit Browsers */
+.Login_input_div input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%) brightness(100%);
+    cursor: pointer;
+    position: relative;
+    right: -180px;
+
 }
