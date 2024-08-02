@@ -54,8 +54,8 @@ function Otp({ length = 4 }) {
     }
 
 
-    const onOtpSubmit = (combainedOtp) => {
-        console.log("login suuccessfully", combainedOtp);
+    const onOtpSubmit = (otp) => {
+        console.log("login suuccessfully", otp);
     }
 
 
