@@ -1,13 +1,21 @@
 .date_of_birth_div,
 .otp_div {
     display: flex;
+    justify-content: center;
     gap: 10px;
     width: 335px;
+    margin: 30px 0;
 }
 
 .date_of_birth_div input,
 .otp_div input {
     width: 100%;
+}
+
+.otp_div input {
+    text-align: center !important;
+    width: 70px;
+    height: 70px;
 }
 
 .date_of_birth_div select {
@@ -38,7 +46,6 @@
     color: #f5f5f5;
     font-size: 14px;
     padding: 20px;
-    outline: 0;
     align-items: center;
     background-color: #04141e;
     border-radius: 10px;

@@ -27,6 +27,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import store from './store';
 import { useEffect } from "react";
 import { LoadingUser } from "./Actions/UserAction";
+import AfflicatePage from "./pages/AfflicatePage/AfflicatePage";
+import Overview from "./components/AfflicatePageComponent/Overview/Overview";
+import RefUser from "./components/AfflicatePageComponent/RefUser/RefUser";
+import RefLink from "./components/AfflicatePageComponent/RefLink/RefLink";
+import Otp from "./pages/Register/Otp";
 
 
 function App() {
@@ -43,6 +48,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<LayOut> <Home /></LayOut>} />
             <Route exact path="/bonus" element={<LayOut> <Bonus /></LayOut>} />
+            <Route exact path="/otp" element={<LayOut> <Otp /></LayOut>} />
+
             <Route
               path="/settings"
               element={
@@ -55,6 +62,18 @@ function App() {
               <Route path="security" element={<Security />} />
               <Route path="preferences" element={<Preferences />} />
               <Route path="black-list" element={<Blacklist />} />
+            </Route>
+            <Route
+              path="/referral"
+              element={
+                <LayOut>
+                  <AfflicatePage />
+                </LayOut>
+              }
+            >
+              <Route path="overview" element={<Overview />} />
+              <Route path="comission" element={<RefUser />} />
+              <Route path="referred-users" element={<RefLink />} />
             </Route>
             <Route
               path="/casino"

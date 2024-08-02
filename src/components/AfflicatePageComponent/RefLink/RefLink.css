@@ -1,0 +1,126 @@
+.RefLink_box {
+    background-color: #04141E;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    gap: 14px;
+    line-height: 100%;
+    padding: 12px 16px;
+    width: 100%;
+}
+
+.RefLink_box_div {
+    display: flex;
+    gap: 20px;
+}
+
+.RefLink_value {
+    word-wrap: break-word;
+    color: #8ca3b8;
+    overflow: hidden;
+    white-space: normal;
+    font-size: 16px;
+}
+
+.RefLink_heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.RefLink_CAMPAIGNS_div {
+    align-items: center;
+    background-color: #072537;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+.RefLink_CAMPAIGNS_Commission {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #8ca3b8;
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.ref_dropdown_arrow_true {
+    cursor: pointer;
+    rotate: 0;
+}
+
+.ref_dropdown_arrow_false {
+    cursor: pointer;
+    rotate: 180deg;
+}
+
+.RefLink_dropdown_div {
+    background-color: #072537;
+    padding: 20px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.RefLink_dropdown_box_div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.RefLink_dropdown_box div {
+    color: #8ca3b8;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.RefLink_dropdown_box p {
+    font-size: 18px;
+}
+
+.REFERRAL_link p {
+    color: #8ca3b8;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 30px 0 10px 0;
+}
+
+.REFERRAL_link div {
+    background-color: #04141e;
+    color: #f5f5f5;
+    font-size: 14px;
+    height: 50px;
+    padding: 0 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.REFERRAL_link img {
+    cursor: pointer;
+}
+
+.REFERRAL_link img:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.ref_link_create_btn {
+    font-weight: 700;
+    height: 50px;
+    margin-top: 30px;
+}

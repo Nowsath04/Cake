@@ -43,7 +43,6 @@ const NavBar = () => {
 
   const { user, isAuthentication } = useSelector((selector) => selector.auth);
 
-  console.log(user);
 
   // connect wallet Function - metamask
 
@@ -263,7 +262,7 @@ const NavBar = () => {
                           <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\deposit.svg" alt="" /> Deposit</button>
                           <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\withdraw.svg" alt="" /> Withdraw</button>
                           <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\transactions.svg" alt="" /> Transactions</button>
-                          <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\affiliate.svg" alt="" /> Affiliate</button>
+                          <NavLink to={"/referral/overview"} onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\affiliate.svg" alt="" /> Affiliate</NavLink>
                           <Link onClick={handleNavLinkClick} to={"/bonus"} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\rank.svg" alt="" /> Rank</Link>
                           <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\liveSupport.svg" alt="" /> Live Support</button>
                           <NavLink onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\settings.svg" alt="" /> Settings</NavLink>

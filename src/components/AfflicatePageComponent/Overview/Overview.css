@@ -1,0 +1,62 @@
+.RefLink_div {
+    width: 100%;
+    border-radius: 10px;
+    background: #072537;
+    padding: 20px;
+}
+
+.overview_heading {
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.overview_video_div {
+    margin: 20px 0;
+}
+
+.overview_video {
+    width: 100% !important;
+}
+
+.overview_revenue_box {
+    width: fit-content;
+    background: #072537;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 10px;
+    line-height: 1.5;
+    padding: 14px 20px 20px;
+    margin-bottom: 40px;
+}
+
+.overview_revenue_box span {
+    background: #1e5c96;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 8px 12px;
+    text-transform: uppercase;
+}
+
+.overview_revenue_heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.overview_revenue_div p {
+    font-size: 12px;
+    letter-spacing: -.03em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    margin-bottom: 16px;
+}

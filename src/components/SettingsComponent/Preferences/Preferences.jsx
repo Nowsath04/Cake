@@ -9,7 +9,7 @@ function Preferences() {
     return (
         <div className='General_div'>
             <div className='General_heading'>Privacy</div>
-            <p>User privacy is one of the most important issues of Rake.com! These settings will protect you from negative external influences.</p>
+            <p style={{ margin: "15px 0" }}>User privacy is one of the most important issues of Rake.com! These settings will protect you from negative external influences.</p>
             <div className='toogle_div'>
                 <button onClick={() => setToggle(!toggle)} className={toggle ? "toggle_button_true" : "toggle_button"} type="button">
                     <div className={toggle ? "toggle_round_true" : "toggle_round"}></div>
