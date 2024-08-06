@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useFormik } from "formik";
-import "./Register.css";
 import { IoIosClose } from "react-icons/io";
 import { basicSchema } from '../../ValidationSchema';
 import { useDispatch } from 'react-redux';
 import { userDetailError, userDetailRequest, userDetailSuccess } from '../../sclices/userDetailsSlice';
 import axios from 'axios';
 import { API_URL } from '../../../constants/Url';
+import "./Register.css";
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-const Register = ({ setRegister }) => {
+const Register = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
     const [isChecked, setIsChecked] = useState(false);
+    const [register, setRegister] = useState(false);
+
 
     const handleCheckboxChange = (event) => {
         setIsChecked(event.target.checked);
@@ -27,9 +32,9 @@ const Register = ({ setRegister }) => {
             console.log(data.user);
             dispatch(userDetailSuccess(data.user));
             actions.resetForm()
-            setRegister(false);
             window.location.reload("/")
         } catch (error) {
+            toast.error("Email already registered")
             dispatch(userDetailError(error));
         }
     };
@@ -47,6 +52,11 @@ const Register = ({ setRegister }) => {
 
     const { values, handleBlur, handleChange, errors, handleSubmit, touched, isSubmitting } = formik;
 
+
+    const handleClose = () => {
+        navigate(-1);
+    }
+
     return (
         <>
             <div className='Login_maindiv'>
@@ -54,7 +64,7 @@ const Register = ({ setRegister }) => {
                     <div className='Login_in_div'>
                         <div className='login_logo_div'>
                             <img src="\assets\images\nav\Frame 96.svg" alt='' />
-                            {/* <div onClick={handleClose}><IoIosClose className='close_icon' /></div> */}
+                            <div onClick={handleClose}><IoIosClose className='close_icon' /></div>
                         </div>
                         <div className='Login_heading'>User Details</div>
                         <div className='Login_input_div'>

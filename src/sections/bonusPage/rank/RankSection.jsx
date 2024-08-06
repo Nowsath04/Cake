@@ -44,7 +44,7 @@ const RankSection = () => {
                       alt=""
                       className="shadow_img"
                     />
-                    <img src={data.image2} alt="" className="rank_image"/>
+                    <img src={data.image2} alt="" className="rank_image" />
                     <p>{data.name}</p>
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const RankSection = () => {
           </div>
         </div>
       </div>
-     
+
     </section>
   );
 };

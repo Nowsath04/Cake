@@ -32,6 +32,7 @@ import Overview from "./components/AfflicatePageComponent/Overview/Overview";
 import RefUser from "./components/AfflicatePageComponent/RefUser/RefUser";
 import RefLink from "./components/AfflicatePageComponent/RefLink/RefLink";
 import Otp from "./pages/Register/Otp";
+import Register from "./pages/Register/Register";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             <Route exact path="/" element={<LayOut> <Home /></LayOut>} />
             <Route exact path="/bonus" element={<LayOut> <Bonus /></LayOut>} />
             <Route exact path="/otp" element={<LayOut> <Otp /></LayOut>} />
+            <Route exact path="/userdetails" element={<LayOut> <Register /></LayOut>} />
 
             <Route
               path="/settings"

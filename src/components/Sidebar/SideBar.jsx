@@ -113,15 +113,15 @@ const SideBar = () => {
           {sport && (
             <div
               className="casino_section"
-              style={{ height: casinoActive ? "427px" : "40px" }}
+              style={{ height: casinoActive ? "476px" : "40px" }}
             >
               <div className="casino_main">
                 <div className="casino_left">
-                  <img src="\assets\images\sidebar\icons\casino.png" alt="" />
+                  <img src="\assets\images\home\sports-table.svg" alt="" />
                   <p>Sports</p>
                 </div>
                 <img
-                  src="\assets\images\sidebar\icons\arrow.png"
+                  src="\assets\images\sidebar\icons\arrow.svg"
                   style={{
                     transform: `rotate(${!casinoActive ? "0deg" : "180deg"})`,
                   }}
@@ -131,12 +131,16 @@ const SideBar = () => {
               </div>
               <div className="casino_subheading">
                 <NavCard
-                  image={"/assets/images/sidebar/icons/favour.png"}
+                  image={"/assets/images/sidebar/icons/favor.svg"}
                   lable={"Favorites"}
+                  to={"/casino/favourite"}
+
                 />
                 <NavCard
-                  image={"/assets/images/sidebar/icons/recent.png"}
+                  image={"/assets/images/sidebar/icons/recent.svg"}
                   lable={"Recent"}
+                  to={"/casino/recents"}
+
                 />
               </div>
               <div className="casino_subheadings">
@@ -146,6 +150,8 @@ const SideBar = () => {
                       image={value.img}
                       lable={value.lable}
                       key={index}
+                      to={value.to}
+
                     />
                   );
                 })}

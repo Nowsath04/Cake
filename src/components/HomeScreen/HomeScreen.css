@@ -70,3 +70,38 @@
     width: 24px !important;
     height: 24px !important;
 }
+
+.home_rankbar {
+    max-width: 550px;
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+    left: 30px;
+}
+
+.rank_status_bar_homebanner_content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    top: -47px;
+}
+
+.rank_status_bar_homebanner_content_bottom {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    bottom: 45px;
+}
+
+.your_level {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.your_value {
+    color: #00a0ff;
+    font-size: 18px;
+    font-weight: 700;
+}

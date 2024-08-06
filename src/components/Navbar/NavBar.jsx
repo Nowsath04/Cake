@@ -6,22 +6,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { coinSelect, toggleNav } from "../../sclices/navSlice";
 import { showChat } from "../../sclices/chatSlice";
 import NavCoinSelect from "../navCoinSelect/NavCoinSelect";
-import Login from "../../pages/Login/Login";
-import Register from "../../pages/Register/Register";
 import Web3 from "web3";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { API_URL } from "../../../constants/Url";
 import { loginError, loginRequest, loginSuccess } from "../../sclices/userSlice";
 import { LogOutUser, loginUser } from "../../Actions/UserAction";
+import Login from "../../pages/Login/Login";
+import Register from "../../pages/Register/Register";
 
 
 
 const NavBar = () => {
   const [loged, setLogoed] = useState(false);
-  const [login, setLogin] = useState(false);
-  const [otp, setOtp] = useState(false);
-  const [register, setRegister] = useState(false)
   const [userDropdown, setUserDropdown] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -81,6 +78,7 @@ const NavBar = () => {
           dispatch(loginUser(address, nonce, signature));
           getUserBalance(address);
           setuserActive(true);
+          navigate("/")
         } catch (error) {
           console.log(error);
         }
@@ -92,15 +90,6 @@ const NavBar = () => {
       window.location.href = "https://metamask.io/";
     }
   };
-
-  useEffect(() => async () => {
-    if (!user.email) {
-      setRegister(true);
-    } else {
-      setRegister(false);
-    }
-  });
-
 
   useEffect(() => async () => {
     if (isAuthentication) {
@@ -129,6 +118,7 @@ const NavBar = () => {
 
 
   const getUserBalance = async (userAddress) => {
+
     try {
       // Get the balance in Wei
       const balanceWei = await web3.eth.getBalance(userAddress);
@@ -222,9 +212,6 @@ const NavBar = () => {
                   ""
                 )}
                 {
-                  register ? <Register setLogin={setLogin} setRegister={setRegister} /> : ""
-                }
-                {
                   userActive ? "" :
                     <Link onClick={connectWallets} className="btn register_btn">Connect Wallet</Link>
                 }
@@ -240,9 +227,8 @@ const NavBar = () => {
                   ) : (
                     <img
                       src="\assets\images\nav\icon\chat.svg"
-
                       alt=""
-                      onClick={() => dispatch(showChat())}
+                      onClick={() => dispatch(showChat())} 
                     />
                   )}
                   <div className="user_images_div">
@@ -265,7 +251,7 @@ const NavBar = () => {
                           <NavLink to={"/referral/overview"} onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\affiliate.svg" alt="" /> Affiliate</NavLink>
                           <Link onClick={handleNavLinkClick} to={"/bonus"} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\rank.svg" alt="" /> Rank</Link>
                           <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\liveSupport.svg" alt="" /> Live Support</button>
-                          <NavLink onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\settings.svg" alt="" /> Settings</NavLink>
+                          <NavLink to={"/settings/security"} onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\settings.svg" alt="" /> Settings</NavLink>
                           <button onClick={LogOut} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\signOut.svg" alt="" /> Sign Out</button>
                         </div>
                       </div>

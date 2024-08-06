@@ -116,6 +116,28 @@
   height: 18px;
 }
 
+.casino_sub:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.casino_sub:hover p {
+  color: white;
+}
+
+.nav__active img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.nav__active p {
+  color: white;
+}
+
+
+.nav__active {
+  background-color: #455b70 !important;
+}
+
+
 
 .casino_subheadings {
   border-bottom: 1px solid var(--border-color);
@@ -224,8 +246,4 @@
 
 .nav_small_icon_active:hover .large_tooltip {
   visibility: visible;
-}
-
-.nav__active {
-  background-color: #455b70 !important;
 }

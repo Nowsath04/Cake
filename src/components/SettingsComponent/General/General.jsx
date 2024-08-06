@@ -23,16 +23,16 @@ function General() {
                     <div className='General_content_box_subheading'>Login <span>{user?.name}</span></div>
                 </div>
                 <div className='General_content_box'>
-                    <div className='General_content_box_heading'>Email <span> ✓ verified</span></div>
+                    <div className='General_content_box_heading'>Email <span className={user?.email ? "email_verified" : "email_not_verified"}>{user?.email ? "✓ verified" : "Not verified"}</span></div>
                     <div className='General_content_box_subheading'>Email <span>{user?.email}</span></div>
                 </div>
                 <div className='General_content_box'>
                     <div className='General_content_box_heading'>Phone No.</div>
-                    <div className='General_content_box_subheading'>Email <span>{user?.phoneno}</span></div>
+                    <div className='General_content_box_subheading'>Ph No <span>{user?.phoneno}</span></div>
                 </div>
                 <div className='General_content_box'>
                     <div className='General_content_box_heading'>DOB </div>
-                    <div className='General_content_box_subheading'>Email <span>{user?.dateofbirth}</span></div>
+                    <div className='General_content_box_subheading'>DOB <span>{user?.dateofbirth}</span></div>
                 </div>
                 <button style={{ fontWeight: "700" }} className='btn' onClick={() => setEdit(!edit)}>
                     EDIT

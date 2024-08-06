@@ -7,15 +7,20 @@ import HomePayBanner from '../../components/HomePayBanner/HomePayBanner'
 import HomeTableSheet from '../../components/HomeTableSheet/HomeTableSheet'
 import HomeParagraph from '../../components/HomeParagraph/HomeParagraph'
 import Footer from './../../components/Footer/Footer';
+import { useSelector } from 'react-redux'
 
 
 function Home() {
+
+  const { user, isAuthentication } = useSelector((selector) => selector.auth);
+
+
 
   return (
     <>
       <div className='casino_maindiv'>
         <div className='casino_div'>
-          <HomeScreen />
+          <HomeScreen user={user} />
           <HomeBanner />
           <GoToCard />
           <HomePayBanner />
