@@ -84,8 +84,11 @@
 }
 
 .casino_subheading {
-  margin: 4px 0;
+  padding: 4px 0;
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .casino_sub {
@@ -144,7 +147,8 @@
   padding-bottom: 2px;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
+  padding: 4px 0;
 }
 
 .casino_section {
