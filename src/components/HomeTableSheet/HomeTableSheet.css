@@ -1,0 +1,52 @@
+.HomeTableSheet_maindiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeTableSheet_div {
+    width: 262px;
+    padding: 6px;
+    background: var(--primary-background);
+    border-radius: 10px;
+
+}
+
+
+.HomeTableSheet_btn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.HomeTableSheet_btn_div button {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.HomeTableSheet_btn_div button img {
+    width: 20px;
+    height: 20px;
+}
+
+.home_table_div {
+    margin: 0px 0 80px 0;
+    padding: 0 40px;
+}
+
+.No_transtion_Card {
+    height: 68px;
+    background: var(--primary-background);
+    color: #5E6571;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 40px 80px 40px;
+    border-radius: 10px;
+}

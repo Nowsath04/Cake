@@ -1,0 +1,17 @@
+.bonus_section{
+    background-color: var(--primary-background);
+    padding: 30px 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.bonus_cardsection1{
+    display: flex;
+    gap: 30px;
+}
+.bonus_cardsection2{
+    display: flex;
+    gap: 25px;
+
+}

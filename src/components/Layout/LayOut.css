@@ -1,0 +1,19 @@
+.layer_1 {
+  width: 100vw;
+}
+
+.layer_2 {
+  width: 100%;
+  display: flex;
+}
+
+.content {
+
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 90vh;
+
+}

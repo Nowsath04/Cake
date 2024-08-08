@@ -1,0 +1,33 @@
+.home_container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+/* Scrollbar styling for WebKit-based browsers (Chrome, Safari) and Microsoft Edge */
+.slider-container::-webkit-scrollbar {
+    width: 5px;
+    /* Adjust the width of the scrollbar */
+}
+
+.slider-container::-webkit-scrollbar-track {
+    background: #072537;
+    /* Color of the track */
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+    background-color: #072537 !important;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+/* Scrollbar styling for Firefox */
+.slider-container {
+    scrollbar-width: none;
+    scrollbar-color: #072537 #04141E;
+}
+
+.slider-container {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}

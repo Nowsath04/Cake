@@ -1,0 +1,21 @@
+.swiper-slide-custom-livecasino {
+    width: 153px !important;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 10px !important;
+}
+
+.swiper-slide-custom-livecasino:last-child {
+    margin-right: 0 !important;
+    /* Remove margin for the last slide */
+}
+
+.swiper-slide-custom-livecasino img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

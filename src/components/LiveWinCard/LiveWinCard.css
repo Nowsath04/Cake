@@ -1,0 +1,104 @@
+.swiper-slide-custom-livewins {
+    width: 84px !important;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 10px !important;
+}
+
+.swiper-slide-custom-livewins:last-child {
+    margin-right: 0 !important;
+    /* Remove margin for the last slide */
+}
+
+.slider-container .swiper-pagination {
+    display: none !important;
+}
+
+
+.slider-container {
+    padding: 12px;
+    overflow-x: hidden !important;
+    background: #072537;
+    border-radius: 10px;
+    margin: 26px 40px 40px 40px;
+}
+
+.slider-container .slick-list {
+    overflow: hidden !important;
+    text-align: left;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LiveWinCard {
+    width: 84px !important;
+    height: 130px !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column;
+    align-items: center !important;
+    margin: 0 21px 0 0;
+    color: white;
+    gap: 4px;
+}
+
+.LiveWinCard_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.LiveWinCard_level {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.LiveWinCard_level div {
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: #8CA3B8;
+}
+
+.LiveWinCard_level img {
+    width: 20px;
+    height: 20px;
+}
+
+.LiveWinCard_price {
+    font-size: var(--normal-font-size);
+    font-weight: var(--normal-font-weight);
+    color: #3AC922;
+    white-space: nowrap;
+}
+
+.LiveWinCard h3 {
+    margin: 0;
+}
+
+.LiveWinCards_content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.LiveWinCards_content img {
+    width: 8px;
+    height: 8px;
+}
+
+.LiveWinCards_content div {
+
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: #8CA3B8;
+
+}
