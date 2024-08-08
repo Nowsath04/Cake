@@ -228,7 +228,7 @@ const NavBar = () => {
                     <img
                       src="\assets\images\nav\icon\chat.svg"
                       alt=""
-                      onClick={() => dispatch(showChat())} 
+                      onClick={() => dispatch(showChat())}
                     />
                   )}
                   <div className="user_images_div">
@@ -244,10 +244,10 @@ const NavBar = () => {
                         </div>
                         <div className="user_dropdown_list_div">
                           <NavLink onClick={handleNavLinkClick} to={"/settings/general"} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\profile.svg" alt="" /> Profile</NavLink>
-                          <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\wallet.svg" alt="" /> Wallet</button>
-                          <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\deposit.svg" alt="" /> Deposit</button>
+                          <NavLink onClick={handleNavLinkClick} to={"/wallet/account-details"} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\wallet.svg" alt="" /> Wallet</NavLink>
+                          {/* <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\deposit.svg" alt="" /> Deposit</button>
                           <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\withdraw.svg" alt="" /> Withdraw</button>
-                          <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\transactions.svg" alt="" /> Transactions</button>
+                          <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\transactions.svg" alt="" /> Transactions</button> */}
                           <NavLink to={"/referral/overview"} onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\affiliate.svg" alt="" /> Affiliate</NavLink>
                           <Link onClick={handleNavLinkClick} to={"/bonus"} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\rank.svg" alt="" /> Rank</Link>
                           <button onClick={handleNavLinkClick} className="user_dropdown_list_button"><img src="\assets\images\nav\user-list\liveSupport.svg" alt="" /> Live Support</button>

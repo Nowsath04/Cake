@@ -33,6 +33,11 @@ import RefUser from "./components/AfflicatePageComponent/RefUser/RefUser";
 import RefLink from "./components/AfflicatePageComponent/RefLink/RefLink";
 import Otp from "./pages/Register/Otp";
 import Register from "./pages/Register/Register";
+import WalletPage from "./pages/WalletPage/WalletPage";
+import AccontDetails from "./components/WalletPageComponent/AccontDetails/AccontDetails";
+import Deposit from "./components/WalletPageComponent/Deposit/Deposit";
+import Withdraw from "./components/WalletPageComponent/Withdraw/Withdraw";
+import Transaction from "./components/WalletPageComponent/Transaction/Transaction";
 
 
 function App() {
@@ -65,6 +70,21 @@ function App() {
               <Route path="preferences" element={<Preferences />} />
               <Route path="black-list" element={<Blacklist />} />
             </Route>
+
+            <Route
+              path="/wallet"
+              element={
+                <LayOut>
+                  <WalletPage />
+                </LayOut>
+              }
+            >
+              <Route path="account-details" element={<AccontDetails />} />
+              <Route path="deposit" element={<Deposit />} />
+              <Route path="withdraw" element={<Withdraw />} />
+              <Route path="transaction" element={<Transaction />} />
+            </Route>
+
             <Route
               path="/referral"
               element={
